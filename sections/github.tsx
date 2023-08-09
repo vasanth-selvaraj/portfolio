@@ -90,7 +90,7 @@ export default function GitHub() {
               username="vasanth-selvaraj"
             />
           </div>
-          <div className="flex flex-wrap mt-10 gap-6">
+          <div className="flex flex-wrap justify-center mt-10 gap-6">
             <div className="flex w-80 h-44 items-center">
               <h1 className="text-3xl font-bold">
                 My <span className="text-accent-color">Repositories</span>
