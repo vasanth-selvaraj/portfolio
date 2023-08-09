@@ -9,7 +9,7 @@ import Image from "next/image";
 interface Repo {
   id: number;
   name: string;
-  html_url: String;
+  html_url: URL;
   language: string;
 }
 
@@ -21,7 +21,7 @@ export default function GitHub() {
       const res = await Repos();
       const repos = res.map(
         (repo: {
-          html_url: String;
+          html_url: URL;
           id: number;
           name: string;
           language: string;
