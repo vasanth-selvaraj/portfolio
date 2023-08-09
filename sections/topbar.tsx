@@ -9,7 +9,7 @@ export default function TopBar() {
     <div className="w-full">
       <div className="flex p-4 justify-between xl:justify-start md:px-14 pt-3 ">
         <Image
-          src={Logo}
+          src={Logo} 
           alt="Vasanth"
           height={80}
           width={80}
