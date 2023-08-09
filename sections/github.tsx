@@ -90,8 +90,8 @@ export default function GitHub() {
               username="vasanth-selvaraj"
             />
           </div>
-          <div className="flex flex-wrap justify-center mt-10 gap-6">
-            <div className="flex w-80 h-44 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center md:mt-10 gap-6">
+            <div className="flex p-4 justify-center items-center">
               <h1 className="text-3xl font-bold">
                 My <span className="text-accent-color">Repositories</span>
               </h1>
@@ -106,10 +106,10 @@ export default function GitHub() {
                       : "#"
                   }
                   target="_blank"
-                  className="flex w-80 h-44 cursor-pointer hover:scale-105 group transform transition duration-300 border border-accent-color rounded"
+                  className="flex p-2 cursor-pointer hover:scale-105 group justify-center transform transition duration-300 border border-accent-color rounded"
                 >
-                  <div className="bg-gray-200 w-full rounded-lg shadow-md overflow-hidden flex flex-col">
-                    <div className="flex justify-between text-justify gap-2 p-4">
+                  <div className="flex w-full flex-col">
+                    <div className="flex justify-between text-justify p-4">
                       <h3 className="text-sm font-medium font-sans">
                         {repos.name}
                       </h3>
@@ -121,8 +121,8 @@ export default function GitHub() {
                         alt="repo img"
                       />
                     </div>
-                    <div className="pl-4 flex items-center">
-                      <div className="flex py-4 gap-4">
+                    <div className=" flex items-center">
+                      <div className="pl-4 flex py-4 gap-4">
                         {repos.language !== null && (
                           <Image
                             src={imagesforlan[repos.language]}
