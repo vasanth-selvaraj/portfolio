@@ -6,14 +6,21 @@ import { useState } from "react";
 export default function TopBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="w-full">
-      <div className="flex p-4 justify-between xl:justify-start md:px-14 pt-3 ">
+    <div className="w-full xl:relative xl:shadow-none sticky bg-main-color top-0 shadow-2xl">
+      <div className="flex p-4 justify-between xl:justify-start md:px-14 px-8 pt-3 ">
+        <Image
+          src={Logo} 
+          alt="Vasanth"
+          height={45}
+          width={45}
+          className="xl:hidden"
+        />
         <Image
           src={Logo} 
           alt="Vasanth"
           height={80}
           width={80}
-          className=""
+          className="hidden xl:block"
         />
         <div className="xl:hidden flex items-center">
           <button
