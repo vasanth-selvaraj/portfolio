@@ -1,34 +1,34 @@
 import { useEffect, useState } from "react";
 import { Repos } from "@/modules/github";
 import Tooltip from "@mui/material/Tooltip";
+import Link from "next/link";
 
 import GitHubCalendar from "react-github-calendar";
 import Image from "next/image";
 
-interface ConvertedData {
-  [key: string]: number;
-}
-
 interface Repo {
   id: number;
   name: string;
+  html_url: String;
   language: string;
-  // ... other properties from the API response ...
 }
 
 export default function GitHub() {
-  const [contribution, setContibution] = useState<ConvertedData>({});
-  const [totalcontribution, setTotalContribution] = useState(0);
-  const [lastKey, setLastKey] = useState("");
   const [repolist, setRepoList] = useState<Repo[]>([]);
 
   useEffect(() => {
     async function contibutionFetch() {
       const res = await Repos();
       const repos = res.map(
-        (repo: { id: number; name: string; language: string }) => ({
+        (repo: {
+          html_url: String;
+          id: number;
+          name: string;
+          language: string;
+        }) => ({
           id: repo.id,
           name: repo.name,
+          html_url: repo.html_url,
           language: repo.language,
         })
       );
@@ -90,29 +90,40 @@ export default function GitHub() {
               username="vasanth-selvaraj"
             />
           </div>
-          <div className="flex flex-wrap justify-center mt-10 gap-4">
-            <div className="flex w-80 items-center">
+          <div className="flex flex-wrap mt-10 gap-6">
+            <div className="flex w-80 h-44 items-center">
               <h1 className="text-3xl font-bold">
                 My <span className="text-accent-color">Repositories</span>
               </h1>
             </div>
             {repolist.map((repos) => {
               return (
-                <div className="flex w-80 cursor-pointer hover:scale-105 group transform transition duration-300 justify-center border border-accent-color rounded">
+                <Link
+                  href={
+                    repos.html_url &&
+                    (repos.html_url !== null || repos.html_url !== undefined)
+                      ? repos.html_url
+                      : "#"
+                  }
+                  target="_blank"
+                  className="flex w-80 h-44 cursor-pointer hover:scale-105 group transform transition duration-300 border border-accent-color rounded"
+                >
                   <div className="bg-gray-200 w-full rounded-lg shadow-md overflow-hidden flex flex-col">
                     <div className="flex justify-between text-justify gap-2 p-4">
-                      <h3 className="text-sm font-bold">{repos.name}</h3>
+                      <h3 className="text-sm font-medium font-sans">
+                        {repos.name}
+                      </h3>
                       <Image
                         src={`https://opengraph.githubassets.com/1/vasanth-selvaraj/${repos.name}`}
-                        height={100}
-                        width={120}
+                        height={150}
+                        width={150}
                         className="rounded"
                         alt="repo img"
                       />
                     </div>
-                    {repos.language !== null && (
-                      <div className="pl-4 flex items-center">
-                        <div className="flex py-4 gap-4">
+                    <div className="pl-4 flex items-center">
+                      <div className="flex py-4 gap-4">
+                        {repos.language !== null && (
                           <Image
                             src={imagesforlan[repos.language]}
                             height={25}
@@ -120,12 +131,14 @@ export default function GitHub() {
                             alt="key"
                             className="rounded flex justify-center items-center"
                           />
-                        </div>
-                        <h3 className="text-xs pl-2">{repos.language}</h3>
+                        )}
                       </div>
-                    )}
+                      <h3 className="text-xs pl-2">
+                        {repos.language !== null && repos.language}
+                      </h3>
+                    </div>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>

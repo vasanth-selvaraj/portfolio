@@ -104,6 +104,16 @@ export default function TopBar() {
                     </li>
                     <li>
                       <Link
+                        href="/#github"
+                        aria-label="Sign in"
+                        title="Sign in"
+                        className="font-medium tracking-wide text-maven-white transition-colors duration-200"
+                      >
+                        Github
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
                         href="/#skills"
                         aria-label="Sign in"
                         title="Sign in"
