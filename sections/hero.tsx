@@ -1,3 +1,6 @@
+import CodeThink from "../public/code-think.svg"
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <div
@@ -25,12 +28,13 @@ export default function Hero() {
           </div>
         </div>
         <div className="lg:w-1/2 flex flex-col justify-center lg:pl-0 pl-10">
-          <img
-            src="/code-think.svg"
-            height={500}
-            width={500}
-            alt="code thinking"
-          />
+        <Image
+          src={CodeThink}
+          alt="Code Think"
+          height={600}
+          width={500}
+          className=""
+        />
         </div>
       </div>
     </div>

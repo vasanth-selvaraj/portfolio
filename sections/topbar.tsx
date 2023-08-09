@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import Logo from "../public/logo.png"
 import { useState } from "react";
 
 export default function TopBar() {
@@ -6,8 +8,8 @@ export default function TopBar() {
   return (
     <div className="w-full">
       <div className="flex p-4 justify-between xl:justify-start md:px-14 pt-3 ">
-        <img
-          src="/logo.png"
+        <Image
+          src={Logo}
           alt="Vasanth"
           height={80}
           width={80}
@@ -47,8 +49,8 @@ export default function TopBar() {
                       className="inline-flex items-center"
                     >
                       <div className="w-14 h-14 rounded-full nav-shadow">
-                        <img
-                          src="/logo.png"
+                        <Image
+                          src={Logo}
                           alt="Vasanth"
                           width={100}
                           height={100}
