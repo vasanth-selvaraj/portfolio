@@ -48,8 +48,6 @@ export default function GitHub() {
     PHP: "https://www.php.net/images/meta-image.png",
   };
 
-  console.log(repolist);
-
   return (
     <div
       id="github"
