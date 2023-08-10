@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.nav-shadow{
+  box-shadow: 0 0 6px 1px #665DF5;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
