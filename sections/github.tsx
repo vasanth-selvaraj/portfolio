@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Repos } from "@/modules/github";
 import Tooltip from "@mui/material/Tooltip";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import GitHubCalendar from "react-github-calendar";
 import Image from "next/image";
@@ -15,6 +17,10 @@ interface Repo {
 
 export default function GitHub() {
   const [repolist, setRepoList] = useState<Repo[]>([]);
+
+  useEffect(() => {
+    AOS.init({ duration: 900 });
+  }, []);
 
   useEffect(() => {
     async function contibutionFetch() {
@@ -53,7 +59,10 @@ export default function GitHub() {
       id="github"
       className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-20"
     >
-      <div className="flex border border-line w-32 justify-between items-center rounded-3xl px-4 py-1 mb-16">
+      <div
+        data-aos="fade-down"
+        className="flex border border-line w-32 justify-between items-center rounded-3xl px-4 py-1 mb-16"
+      >
         <svg
           aria-hidden="true"
           focusable="false"
@@ -67,7 +76,10 @@ export default function GitHub() {
         <div>GitHub</div>
       </div>
       <div className="flex flex-col max-w-5xl">
-        <h1 className="py-4 text-xl font-sans text-justify">
+        <h1
+          data-aos="fade-down"
+          className="py-4 text-xl font-sans text-justify"
+        >
           Through the pixels of my{" "}
           <span className="text-accent-color text-3xl">
             GitHub contribution map
@@ -76,7 +88,10 @@ export default function GitHub() {
           source and the power of collaborative creation.
         </h1>
         <div className="flex w-full justify-evenly flex-col items-center gap-4 pb-8 rounded">
-          <div className=" py-8 flex flex-col justify-center rounded">
+          <div
+            data-aos="fade-down"
+            className=" py-8 flex flex-col justify-center rounded"
+          >
             <GitHubCalendar
               colorScheme={"dark"}
               renderBlock={(block, activity) => (
@@ -90,7 +105,10 @@ export default function GitHub() {
               username="vasanth-selvaraj"
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center md:mt-10 gap-6">
+          <div
+            data-aos="fade-right"
+            className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center md:mt-10 gap-6"
+          >
             <div className="flex p-4 justify-center items-center">
               <h1 className="text-3xl font-bold">
                 My <span className="text-accent-color">Repositories</span>

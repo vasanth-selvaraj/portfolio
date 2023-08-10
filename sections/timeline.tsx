@@ -1,10 +1,18 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 export default function TimeLine() {
+  useEffect(() => {
+    AOS.init({ duration: 500 });
+  }, []);
+
   return (
     <div
       id="timeline"
       className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-14"
     >
-      <div className="flex border border-line w-32 justify-between rounded-3xl px-4 py-1 mb-20">
+      <div data-aos="fade-down" className="flex border border-line w-32 justify-between rounded-3xl px-4 py-1 mb-20">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -24,8 +32,16 @@ export default function TimeLine() {
       </div>
       <div className="hidden max-w-5xl flex-col lg:flex">
         <div className="grid grid-cols-7">
-          <h3 className=" col-span-3 py-4 flex justify-end">March 2019</h3>
-          <div className="flex flex-col items-center col-span-1">
+          <h3
+            data-aos="fade-right"
+            className=" col-span-3 py-4 flex justify-end"
+          >
+            March 2019
+          </h3>
+          <div
+            data-aos="fade-down"
+            className="flex flex-col items-center col-span-1"
+          >
             <div className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +60,7 @@ export default function TimeLine() {
             </div>
             <div className="w-[2px] h-16 bg-[#ffff]"></div>
           </div>
-          <div className="col-span-3">
+          <div data-aos="fade-right" className="col-span-3">
             <div className="rounded border border-line">
               <h3 className="p-4">
                 Graduated from Bannari Amman Institution with a degree in
@@ -54,7 +70,7 @@ export default function TimeLine() {
           </div>
         </div>
         <div className="grid grid-cols-7">
-          <div className="col-span-3">
+          <div data-aos="fade-right" className="col-span-3">
             <div className="rounded border border-line">
               <h3 className="p-4">
                 Joined Tata Consultancy Services (TCS) as Assistant system
@@ -63,7 +79,10 @@ export default function TimeLine() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center col-span-1">
+          <div
+            data-aos="fade-down"
+            className="flex flex-col items-center col-span-1"
+          >
             <div className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -82,11 +101,24 @@ export default function TimeLine() {
             </div>
             <div className="w-[2px] h-16 bg-[#ffff]"></div>
           </div>
-          <h3 className=" col-span-3 py-4 flex justify-start">June 2019</h3>
+          <h3
+            data-aos="fade-right"
+            className=" col-span-3 py-4 flex justify-start"
+          >
+            June 2019
+          </h3>
         </div>
         <div className="grid grid-cols-7">
-          <h3 className=" col-span-3 py-4 flex justify-end">September 2019</h3>
-          <div className="flex flex-col items-center col-span-1">
+          <h3
+            data-aos="fade-right"
+            className=" col-span-3 py-4 flex justify-end"
+          >
+            September 2019
+          </h3>
+          <div
+            data-aos="fade-down"
+            className="flex flex-col items-center col-span-1"
+          >
             <div className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +137,7 @@ export default function TimeLine() {
             </div>
             <div className="w-[2px] h-16 bg-[#ffff]"></div>
           </div>
-          <div className="col-span-3">
+          <div data-aos="fade-right" className="col-span-3">
             <div className="rounded border border-line">
               <h3 className="p-4">
                 Began my journey as an Assistant System Engineer at TCS and
@@ -115,7 +147,7 @@ export default function TimeLine() {
           </div>
         </div>
         <div className="grid grid-cols-7">
-          <div className="col-span-3">
+          <div data-aos="fade-right" className="col-span-3">
             <div className="rounded border border-line">
               <h3 className="p-4">
                 Recognized for my dedication and contributions, I was promoted
@@ -124,7 +156,10 @@ export default function TimeLine() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center col-span-1">
+          <div
+            data-aos="fade-down"
+            className="flex flex-col items-center col-span-1"
+          >
             <div className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -143,11 +178,24 @@ export default function TimeLine() {
             </div>
             <div className="w-[2px] h-16 bg-[#ffff]"></div>
           </div>
-          <h3 className=" col-span-3 py-4 flex justify-start">March 2021</h3>
+          <h3
+            data-aos="fade-right"
+            className=" col-span-3 py-4 flex justify-start"
+          >
+            March 2021
+          </h3>
         </div>
         <div className="grid grid-cols-7">
-          <h3 className=" col-span-3 py-4 flex justify-end">September 2022</h3>
-          <div className="flex flex-col items-center col-span-1">
+          <h3
+            data-aos="fade-right"
+            className=" col-span-3 py-4 flex justify-end"
+          >
+            September 2022
+          </h3>
+          <div
+            data-aos="fade-down"
+            className="flex flex-col items-center col-span-1"
+          >
             <div className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -166,7 +214,7 @@ export default function TimeLine() {
             </div>
             <div className="w-[2px] h-28 bg-[#ffff]"></div>
           </div>
-          <div className="col-span-3">
+          <div data-aos="fade-right" className="col-span-3">
             <div className="rounded border border-line">
               <h3 className="p-4">
                 Joined Mavenberg Innovations, where I continue to create
@@ -177,7 +225,10 @@ export default function TimeLine() {
           </div>
         </div>
         <div className="grid grid-cols-5">
-          <div className="flex flex-col col-start-3 items-center col-span-1">
+          <div
+            data-aos="fade-down"
+            className="flex flex-col col-start-3 items-center col-span-1"
+          >
             <div className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -198,7 +249,10 @@ export default function TimeLine() {
           </div>
         </div>
         <div className="flex justify-center pt-5">
-          <div className="rounded border border-line max-w-xl">
+          <div
+            data-aos="fade-down"
+            className="rounded border border-line max-w-xl"
+          >
             <h3 className="p-4">
               Thriving at Mavenberg, I'm driven to push the boundaries of web
               development and shape the future of the digital landscape
@@ -207,10 +261,15 @@ export default function TimeLine() {
         </div>
       </div>
       <div className="flex max-w-2xl text-xs md:text-base flex-col lg:hidden">
-      <div className="grid grid-cols-12 ">
-          <h3 className=" col-span-3 py-4 flex justify-end">March 2019</h3>
+        <div className="grid grid-cols-12 ">
+          <h3
+            data-aos="fade-right"
+            className=" col-span-3 py-4 flex justify-end"
+          >
+            March 2019
+          </h3>
           <div className="flex flex-col items-center col-span-2">
-            <div className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
+            <div data-aos="fade-down" className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -229,7 +288,7 @@ export default function TimeLine() {
             <div className="w-[2px] h-24 bg-[#ffff]"></div>
           </div>
           <div className="col-span-7">
-            <div className="rounded border border-line">
+            <div data-aos="fade-right" className="rounded border border-line">
               <h3 className="p-4">
                 Graduated from Bannari Amman Institution with a degree in
                 Information Technology
@@ -238,10 +297,15 @@ export default function TimeLine() {
           </div>
         </div>
         <div className="grid grid-cols-12 ">
-          <h3 className=" col-span-3 py-4 flex justify-end">June 2019</h3>
+          <h3
+            data-aos="fade-right"
+            className=" col-span-3 py-4 flex justify-end"
+          >
+            June 2019
+          </h3>
           <div className="flex flex-col items-center col-span-2">
-            <div className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
-            <svg
+            <div data-aos="fade-down" className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -259,18 +323,24 @@ export default function TimeLine() {
             <div className="w-[2px] h-24 bg-[#ffff]"></div>
           </div>
           <div className="col-span-7">
-            <div className="rounded border border-line">
+            <div data-aos="fade-right" className="rounded border border-line">
               <h3 className="p-4">
-              Joined Tata Consultancy Services (TCS) as Assistant system engineer Trainee
+                Joined Tata Consultancy Services (TCS) as Assistant system
+                engineer Trainee
               </h3>
             </div>
           </div>
         </div>
         <div className="grid grid-cols-12 ">
-          <h3 className=" col-span-3 py-4 flex justify-end">September 2019</h3>
+          <h3
+            data-aos="fade-right"
+            className=" col-span-3 py-4 flex justify-end"
+          >
+            September 2019
+          </h3>
           <div className="flex flex-col items-center col-span-2">
-            <div className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
-            <svg
+            <div data-aos="fade-down" className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -288,18 +358,24 @@ export default function TimeLine() {
             <div className="w-[2px] h-24 bg-[#ffff]"></div>
           </div>
           <div className="col-span-7">
-            <div className="rounded border border-line">
+            <div data-aos="fade-right" className="rounded border border-line">
               <h3 className="p-4">
-              Began my journey as an Assistant System Engineer at TCS and contributed to various projects
+                Began my journey as an Assistant System Engineer at TCS and
+                contributed to various projects
               </h3>
             </div>
           </div>
         </div>
         <div className="grid grid-cols-12 ">
-          <h3 className=" col-span-3 py-4 flex justify-end">March 2021</h3>
+          <h3
+            data-aos="fade-right"
+            className=" col-span-3 py-4 flex justify-end"
+          >
+            March 2021
+          </h3>
           <div className="flex flex-col items-center col-span-2">
-            <div className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
-            <svg
+            <div data-aos="fade-down" className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -317,19 +393,24 @@ export default function TimeLine() {
             <div className="w-[2px] h-24 bg-[#ffff]"></div>
           </div>
           <div className="col-span-7">
-            <div className="rounded border border-line">
+            <div data-aos="fade-right" className="rounded border border-line">
               <h3 className="p-4">
-              Recognized for my dedication and contributions, I was promoted to the position of System Engineer at TCS
+                Recognized for my dedication and contributions, I was promoted
+                to the position of System Engineer at TCS
               </h3>
             </div>
           </div>
         </div>
         <div className="grid grid-cols-12 ">
-          <h3 className=" col-span-3 py-4 flex justify-end">September 2022
-</h3>
+          <h3
+            data-aos="fade-right"
+            className=" col-span-3 py-4 flex justify-end"
+          >
+            September 2022
+          </h3>
           <div className="flex flex-col items-center col-span-2">
-            <div className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
-            <svg
+            <div data-aos="fade-down" className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -347,16 +428,18 @@ export default function TimeLine() {
             <div className="w-[2px] h-32 bg-[#ffff]"></div>
           </div>
           <div className="col-span-7">
-            <div className="rounded border border-line">
+            <div data-aos="fade-right" className="rounded border border-line">
               <h3 className="p-4">
-              Joined Mavenberg Innovations, where I continue to create innovative web solutions and contribute to captivating digital experiences.
+                Joined Mavenberg Innovations, where I continue to create
+                innovative web solutions and contribute to captivating digital
+                experiences.
               </h3>
             </div>
           </div>
         </div>
         <div className="grid grid-cols-12">
           <div className="flex flex-col col-start-4 items-center col-span-2">
-            <div className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
+            <div data-aos="fade-down" className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -376,7 +459,7 @@ export default function TimeLine() {
           </div>
         </div>
         <div className="flex justify-center pt-5">
-          <div className="rounded border border-line max-w-5xl">
+          <div data-aos="fade-down" className="rounded border border-line max-w-5xl">
             <h3 className="p-4">
               Thriving at Mavenberg, I'm driven to push the boundaries of web
               development and shape the future of the digital landscape

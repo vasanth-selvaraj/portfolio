@@ -1,12 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "../public/memoji.png"
-import { useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useState,useEffect } from "react";
 
 export default function TopBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    AOS.init({ duration: 500 });
+  }, []);
+
   return (
-    <div className="w-full xl:relative xl:shadow-none sticky bg-main-color z-50 top-0 drop-shadow-2xl shadow-2xl">
+    <div className="w-full xl:relative xl:shadow-none sticky bg-main-color z-50 top-0 shadow-2xl">
       <div className="flex p-4 justify-between xl:justify-start md:px-14 px-8 pt-3 ">
         <Image
           src={Logo} 
@@ -83,7 +90,7 @@ export default function TopBar() {
                 </div>
                 <nav>
                   <ul className="space-y-4">
-                    <li>
+                    <li data-aos="fade-down">
                       <Link
                         href="/"
                         className="font-medium tracking-wide text-text-color transition-colors duration-200 "
@@ -91,7 +98,7 @@ export default function TopBar() {
                         Home
                       </Link>
                     </li>
-                    <li>
+                    <li data-aos="fade-down">
                       <Link
                         href="/#aboutme"
                         className="font-medium tracking-wide text-maven-white transition-colors duration-200 "
@@ -99,7 +106,7 @@ export default function TopBar() {
                         About Me
                       </Link>
                     </li>
-                    <li>
+                    <li data-aos="fade-down">
                       <Link
                         href="/#timeline"
                         aria-label="About us"
@@ -109,7 +116,7 @@ export default function TopBar() {
                         TimeLine
                       </Link>
                     </li>
-                    <li>
+                    <li data-aos="fade-down">
                       <Link
                         href="/#github"
                         aria-label="Sign in"
@@ -119,7 +126,7 @@ export default function TopBar() {
                         Github
                       </Link>
                     </li>
-                    <li>
+                    <li data-aos="fade-down">
                       <Link
                         href="/#skills"
                         aria-label="Sign in"
@@ -129,7 +136,7 @@ export default function TopBar() {
                         Skills
                       </Link>
                     </li>
-                    <li>
+                    <li data-aos="fade-down">
                       <Link
                         href="/#projects"
                         aria-label="Sign in"
@@ -139,7 +146,7 @@ export default function TopBar() {
                         Projects
                       </Link>
                     </li>
-                    <li>
+                    <li data-aos="fade-down">
                       <Link
                         href="/#resume"
                         aria-label="Sign in"
@@ -149,7 +156,7 @@ export default function TopBar() {
                         Resume
                       </Link>
                     </li>
-                    <li>
+                    <li data-aos="fade-down">
                       <Link
                         href="/#contactme"
                         aria-label="Sign in"
