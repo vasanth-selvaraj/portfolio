@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function TopBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="w-full xl:relative xl:shadow-none sticky bg-main-color top-0 shadow-2xl">
+    <div className="w-full xl:relative xl:shadow-none sticky bg-main-color z-50 top-0 drop-shadow-2xl shadow-2xl">
       <div className="flex p-4 justify-between xl:justify-start md:px-14 px-8 pt-3 ">
         <Image
           src={Logo} 
@@ -46,7 +46,7 @@ export default function TopBar() {
           </button>
           {isMenuOpen && (
             <div className="absolute top-2 left-0 w-full px-4">
-              <div className="p-5 bg-main-color shadow-md shadow-accent-color border rounded">
+              <div className="p-5 bg-main-color nav-shadow shadow-accent-color rounded">
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <Link
@@ -55,7 +55,7 @@ export default function TopBar() {
                       title="Company"
                       className="inline-flex items-center"
                     >
-                      <div className="w-14 h-14 rounded-full nav-shadow">
+                      <div className="w-14 h-14 rounded-full">
                         <Image
                           src={Logo}
                           alt="Vasanth"
