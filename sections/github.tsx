@@ -114,9 +114,10 @@ export default function GitHub() {
                 My <span className="text-accent-color">Repositories</span>
               </h1>
             </div>
-            {repolist.map((repos) => {
+            {repolist.map((repos,i) => {
               return (
                 <Link
+                key={i}
                   href={
                     repos.html_url &&
                     (repos.html_url !== null || repos.html_url !== undefined)

@@ -9,7 +9,7 @@ export default function TopBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    AOS.init({ duration: 500 });
+    AOS.init({ duration: 100 });
   }, []);
 
   return (

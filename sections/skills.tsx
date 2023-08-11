@@ -95,9 +95,9 @@ export default function Skills() {
           data-aos="fade-right"
           className="flex flex-wrap justify-center gap-10"
         >
-          {skills.map((skill) => {
+          {skills.map((skill,i) => {
             return (
-              <div className="p-2 h-56 w-36">
+              <div key={i} className="p-2 h-56 w-36">
                 <div className="flex flex-col cursor-pointer h-[90%] items-center justify-evenly hover:scale-105 transition duration-300 border rounded-full border-line hover:border-accent-color text-[#149eca]">
                   <Image
                     height={80}
