@@ -1,5 +1,6 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
 import { useEffect } from "react";
 
 export default function Skills() {
@@ -7,9 +8,66 @@ export default function Skills() {
     AOS.init({ duration: 900 });
   }, []);
 
+  const skills = [
+    {
+      name: "ReactJs",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/768px-React-icon.svg.png?20220125121207",
+      knowledge: 85,
+    },
+    {
+      name: "ExpressJs",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png?20170429090805",
+      knowledge: 80,
+    },
+    {
+      name: "JavaScript",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/180px-JavaScript-logo.png",
+      knowledge: 78,
+    },
+    {
+      name: "Figma",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/600px-Figma-logo.svg.png?20190122211436",
+      knowledge: 60,
+    },
+    {
+      name: "NextJs",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/591px-Nextjs-logo.svg.png?20230404233503",
+      knowledge: 40,
+    },
+    {
+      name: "Mongo DB",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/768px-MongoDB_Logo.svg.png?20190626143224",
+      knowledge: 70,
+    },
+    {
+      name: "PostgreSQL",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/116px-Postgresql_elephant.svg.png?20080116191800",
+      knowledge: 40,
+    },
+    {
+      name: "git",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Git-logo-orange.svg/180px-Git-logo-orange.svg.png",
+      knowledge: 75,
+    },
+    {
+      name: "Azure Devops",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/225px-Microsoft_Azure.svg.png?20211008202712",
+      knowledge: 65,
+    },
+  ];
+
   return (
     <div
-      id="aboutme"
+      id="skills"
       className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-20"
     >
       <div
@@ -33,35 +91,29 @@ export default function Skills() {
         <div>Skills</div>
       </div>
       <div className="max-w-5xl mt-20">
-        <div data-aos="fade-right" className="grid grid-cols-3 gap-6">
-          <div className="hover:scale-105 transition duration-300 border rounded border-accent-color p-2">
-            <div className="flex items-center px-2 justify-evenly text-[#149eca]">
-              <svg
-                width="100%"
-                height="100%"
-                viewBox="-10.5 -9.45 21 18.9"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="mt-4 mb-3 text-link dark:text-link-dark w-8 self-center text-sm mr-0 flex origin-center transition-all ease-in-out"
-              >
-                <circle cx="0" cy="0" r="2" fill="currentColor"></circle>
-                <g stroke="currentColor" stroke-width="1" fill="none">
-                  <ellipse rx="10" ry="4.5"></ellipse>
-                  <ellipse rx="10" ry="4.5" transform="rotate(60)"></ellipse>
-                  <ellipse rx="10" ry="4.5" transform="rotate(120)"></ellipse>
-                </g>
-              </svg>
-              <div className="h-3 w-full flex justify-center">
-                <div className="h-full w-[90%] bg-line rounded-lg">
-                  <div className="h-full w-[75%] bg-[#149eca] rounded-xl"></div>
+        <div
+          data-aos="fade-right"
+          className="flex flex-wrap justify-center gap-10"
+        >
+          {skills.map((skill) => {
+            return (
+              <div className="p-2 h-56 w-36">
+                <div className="flex flex-col cursor-pointer h-[90%] items-center justify-evenly hover:scale-105 transition duration-300 border rounded-full border-line hover:border-accent-color text-[#149eca]">
+                  <Image
+                    height={80}
+                    width={80}
+                    alt="skill"
+                    className="rounded-xl p-2"
+                    src={skill.image}
+                  />
+                  <h1 className="text-text-color py-2 text-xl font-medium">
+                    {skill.knowledge}%
+                  </h1>
                 </div>
+                <h3 className="py-2 h-[10%] text-center">{skill.name}</h3>
               </div>
-            </div>
-            <h3 className="p-2">React</h3>
-          </div>
-          <div className="hover:scale-105 transition duration-300 border rounded border-accent-color p-4"></div>
-          <div className="hover:scale-105 transition duration-300 border rounded border-accent-color p-4"></div>
-          <div className="hover:scale-105 transition duration-300 border rounded border-accent-color p-4"></div>
+            );
+          })}
         </div>
       </div>
     </div>

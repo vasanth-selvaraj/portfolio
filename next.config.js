@@ -12,6 +12,8 @@ const nextConfig = {
       "w7.pngwing.com",
       "miro.medium.com",
       "banner2.cleanpng.com",
+      "www.google.com",
+      "upload.wikimedia.org"
     ],
   },
 };

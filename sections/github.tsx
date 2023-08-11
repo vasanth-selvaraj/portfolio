@@ -124,7 +124,7 @@ export default function GitHub() {
                       : "#"
                   }
                   target="_blank"
-                  className="flex p-2 cursor-pointer hover:scale-105 group justify-center transform transition duration-300 border border-accent-color rounded"
+                  className="flex p-2 cursor-pointer hover:scale-105 group justify-center transform transition duration-300 border border-line hover:border-accent-color rounded-xl"
                 >
                   <div className="flex w-full flex-col">
                     <div className="flex justify-between text-justify p-4">
