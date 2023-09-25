@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const { generateSitemap } = require("next/server");
+
 const nextConfig = {
   reactStrictMode: true,
   images: {
@@ -13,9 +15,9 @@ const nextConfig = {
       "miro.medium.com",
       "banner2.cleanpng.com",
       "www.google.com",
-      "upload.wikimedia.org"
+      "upload.wikimedia.org",
     ],
   },
 };
 
-module.exports = nextConfig;
+module.exports = { nextConfig, generateSitemap };
