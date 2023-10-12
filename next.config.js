@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const { generateSitemap } = require("next/server");
 
 const nextConfig = {
   reactStrictMode: true,
@@ -21,4 +22,4 @@ const nextConfig = {
   // },
 };
 
-module.exports = nextConfig;
+module.exports = { nextConfig, generateSitemap };
