@@ -148,7 +148,7 @@ export default function GitHub() {
                             alt="key"
                             height={25}
                             width={25}
-                            className="rounded h-6 w-6 flex justify-center items-center"
+                            className="rounded h-6 w-6 flex justify-center mix-blend-lighten items-center"
                           />
                         )}
                       </div>

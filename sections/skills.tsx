@@ -18,7 +18,7 @@ export default function Skills() {
     {
       name: "ExpressJs",
       image:
-        "/expressJs.png",
+        "/expressJs-white.png",
       knowledge: 80,
     },
     {
@@ -36,7 +36,7 @@ export default function Skills() {
     {
       name: "NextJs",
       image:
-        "/NextJs.png",
+        "/nextjs-white.png",
       knowledge: 50,
     },
     {
