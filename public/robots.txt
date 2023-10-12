@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://vasanth-selvaraj.github.io/vasanth
+
+# Sitemaps
+Sitemap: https://vasanth-selvaraj.github.io/vasanth/sitemap.xml

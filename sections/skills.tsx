@@ -12,55 +12,55 @@ export default function Skills() {
     {
       name: "ReactJs",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/768px-React-icon.svg.png?20220125121207",
+        "/reactJs.png",
       knowledge: 85,
     },
     {
       name: "ExpressJs",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png?20170429090805",
+        "/expressJs.png",
       knowledge: 80,
     },
     {
       name: "JavaScript",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/180px-JavaScript-logo.png",
-      knowledge: 78,
+        "/JavaScript.png",
+      knowledge: 80,
     },
     {
       name: "Figma",
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/600px-Figma-logo.svg.png?20190122211436",
+      image:"/figma.png",
+        // "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/600px-Figma-logo.svg.png?20190122211436",
       knowledge: 60,
     },
     {
       name: "NextJs",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/591px-Nextjs-logo.svg.png?20230404233503",
-      knowledge: 40,
+        "/NextJs.png",
+      knowledge: 50,
     },
     {
       name: "Mongo DB",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/768px-MongoDB_Logo.svg.png?20190626143224",
+        "/mongoDb.png",
       knowledge: 70,
     },
     {
       name: "PostgreSQL",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/116px-Postgresql_elephant.svg.png?20080116191800",
+        "/postgreSql.png",
       knowledge: 40,
     },
     {
       name: "git",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Git-logo-orange.svg/180px-Git-logo-orange.svg.png",
-      knowledge: 75,
+        "/git.png",
+      knowledge: 95,
     },
     {
       name: "Azure Devops",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/225px-Microsoft_Azure.svg.png?20211008202712",
+        "/Azure.png",
       knowledge: 65,
     },
   ];

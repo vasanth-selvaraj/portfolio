@@ -52,6 +52,7 @@ export default function GitHub() {
     TypeScript:
       "https://miro.medium.com/v2/resize:fit:256/1*iA-WRbWcbYd3BFAzzFypWg.png",
     PHP: "https://www.php.net/images/meta-image.png",
+    MDX:"/mdx.svg"
   };
 
   return (
@@ -114,10 +115,10 @@ export default function GitHub() {
                 My <span className="text-accent-color">Repositories</span>
               </h1>
             </div>
-            {repolist.map((repos,i) => {
+            {repolist.map((repos, i) => {
               return (
                 <Link
-                key={i}
+                  key={i}
                   href={
                     repos.html_url &&
                     (repos.html_url !== null || repos.html_url !== undefined)
@@ -132,7 +133,7 @@ export default function GitHub() {
                       <h3 className="text-sm font-medium font-sans">
                         {repos.name}
                       </h3>
-                      <Image
+                      <img
                         src={`https://opengraph.githubassets.com/1/vasanth-selvaraj/${repos.name}`}
                         height={150}
                         width={150}
@@ -143,12 +144,10 @@ export default function GitHub() {
                     <div className=" flex items-center">
                       <div className="pl-4 flex py-4 gap-4">
                         {repos.language !== null && (
-                          <Image
+                          <img
                             src={imagesforlan[repos.language]}
-                            height={25}
-                            width={25}
                             alt="key"
-                            className="rounded flex justify-center items-center"
+                            className="rounded h-6 w-6 flex justify-center items-center"
                           />
                         )}
                       </div>
