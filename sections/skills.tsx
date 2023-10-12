@@ -11,56 +11,48 @@ export default function Skills() {
   const skills = [
     {
       name: "ReactJs",
-      image:
-        "/reactJs.png",
+      image: "/reactJs.png",
       knowledge: 85,
     },
     {
       name: "ExpressJs",
-      image:
-        "/expressJs-white.png",
+      image: "/expressJs-white.png",
       knowledge: 80,
     },
     {
       name: "JavaScript",
-      image:
-        "/JavaScript.png",
+      image: "/javaScript.png",
       knowledge: 80,
     },
     {
       name: "Figma",
-      image:"/figma.png",
-        // "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/600px-Figma-logo.svg.png?20190122211436",
+      image: "/figma.png",
+      // "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/600px-Figma-logo.svg.png?20190122211436",
       knowledge: 60,
     },
     {
       name: "NextJs",
-      image:
-        "/nextjs-white.png",
+      image: "/nextjs-white.png",
       knowledge: 50,
     },
     {
       name: "Mongo DB",
-      image:
-        "/mongoDb.png",
+      image: "/mongoDb.png",
       knowledge: 70,
     },
     {
       name: "PostgreSQL",
-      image:
-        "/postgreSql.png",
+      image: "/postgreSql.png",
       knowledge: 40,
     },
     {
       name: "git",
-      image:
-        "/git.png",
+      image: "/git.png",
       knowledge: 95,
     },
     {
       name: "Azure Devops",
-      image:
-        "/Azure.png",
+      image: "/Azure.png",
       knowledge: 65,
     },
   ];
@@ -95,9 +87,13 @@ export default function Skills() {
           data-aos="fade-right"
           className="flex flex-wrap justify-center gap-10"
         >
-          {skills.map((skill,i) => {
+          {skills.map((skill, i) => {
             return (
-              <div key={i} className="p-2 h-56 w-36">
+              <div
+                data-aos={`${i % 2 == 0 ? "fade-right" : "fade-left"}`}
+                key={i}
+                className="p-2 h-56 w-36"
+              >
                 <div className="flex flex-col cursor-pointer h-[90%] items-center justify-evenly hover:scale-105 transition duration-300 border rounded-full border-line hover:border-accent-color text-[#149eca]">
                   <Image
                     height={80}

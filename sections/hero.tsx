@@ -1,4 +1,5 @@
 import CodeThink from "../public/code-think.svg";
+import Coding from "../public/coding.svg"
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -14,7 +15,7 @@ export default function Hero() {
       className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-12"
     >
       <div className="flex flex-col space-y-12 justify-between lg:flex-row lg:space-y-0">
-        <div data-aos="fade-right" className=" lg:w-1/2 flex flex-col lg:pr-10 lg:text-left text-center justify-center pr-0">
+        <div data-aos="fade-up" className=" lg:w-1/2 flex flex-col lg:pr-10 lg:text-left text-center justify-center pr-0">
           <h1 className="mb-4 lg:mt-20 font-sans  text-3xl tracking-wide font-bold text-text-color sm:text-5xl sm:leading-none">
             Hi, I’m <span className="text-accent-color">Vasanth</span>
           </h1>
@@ -33,9 +34,9 @@ export default function Hero() {
             </button>
           </div>
         </div>
-        <div data-aos="fade-right" className="lg:w-1/2 flex flex-col justify-center lg:pl-0 pl-10">
+        <div data-aos="fade-down" className="lg:w-1/2 flex flex-col justify-center lg:pl-0 pl-10">
           <Image
-            src={CodeThink}
+            src={Coding}
             alt="Code Think"
             height={600}
             width={500}

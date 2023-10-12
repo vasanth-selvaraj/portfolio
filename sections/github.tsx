@@ -106,7 +106,6 @@ export default function GitHub() {
             />
           </div>
           <div
-            data-aos="fade-right"
             className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center md:mt-10 gap-6"
           >
             <div className="flex p-4 justify-center items-center">
@@ -117,6 +116,7 @@ export default function GitHub() {
             {repolist.map((repos, i) => {
               return (
                 <Link
+                data-aos={`${i%2==0?"fade-right":"fade-left"}`}
                   key={i}
                   href={
                     repos.html_url &&

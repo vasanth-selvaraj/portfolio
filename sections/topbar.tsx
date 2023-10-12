@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../public/memoji.png"
+import Logo from "../public/memoji.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function TopBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,20 +15,25 @@ export default function TopBar() {
   return (
     <div className="w-full xl:relative xl:shadow-none sticky bg-main-color z-50 top-0 shadow-2xl">
       <div className="flex p-4 justify-between xl:justify-start md:px-14 px-8 pt-3 ">
-        <Image
-          src={Logo} 
-          alt="Vasanth"
-          height={45}
-          width={45}
-          className="xl:hidden"
-        />
-        <Image
-          src={Logo} 
-          alt="Vasanth"
-          height={80}
-          width={80}
-          className="hidden xl:block"
-        />
+        <Link href="/" aria-label="Company" title="Company">
+          <Image
+            src={Logo}
+            alt="Vasanth"
+            height={45}
+            width={45}
+            className="xl:hidden cursor-pointer"
+          />
+        </Link>
+        <Link href="/" aria-label="Company" title="Company">
+          <Image
+            src={Logo}
+            alt="Vasanth"
+            height={80}
+            width={80}
+            className="hidden xl:block"
+          />
+        </Link>
+
         <div className="xl:hidden flex items-center">
           <button
             aria-label="Open Menu"
@@ -90,7 +95,15 @@ export default function TopBar() {
                 </div>
                 <nav>
                   <ul className="space-y-4">
-                    <li data-aos="fade-down">
+                    <li data-aos="fade">
+                      <Link
+                        href="https://blog.vasanth.tech"
+                        className="font-medium text-xl text-accent-color tracking-wide p-2 border rounded border-accent-color hover:border-accent-color transition-colors duration-200 "
+                      >
+                        Blog
+                      </Link>
+                    </li>
+                    <li data-aos="fade">
                       <Link
                         href="/"
                         className="font-medium tracking-wide text-text-color transition-colors duration-200 "
@@ -98,7 +111,7 @@ export default function TopBar() {
                         Home
                       </Link>
                     </li>
-                    <li data-aos="fade-down">
+                    <li data-aos="fade">
                       <Link
                         href="/#aboutme"
                         className="font-medium tracking-wide text-maven-white transition-colors duration-200 "
@@ -106,7 +119,7 @@ export default function TopBar() {
                         About Me
                       </Link>
                     </li>
-                    <li data-aos="fade-down">
+                    <li data-aos="fade">
                       <Link
                         href="/#timeline"
                         aria-label="About us"
@@ -116,7 +129,7 @@ export default function TopBar() {
                         TimeLine
                       </Link>
                     </li>
-                    <li data-aos="fade-down">
+                    <li data-aos="fade">
                       <Link
                         href="/#github"
                         aria-label="Sign in"
@@ -126,7 +139,7 @@ export default function TopBar() {
                         Github
                       </Link>
                     </li>
-                    <li data-aos="fade-down">
+                    <li data-aos="fade">
                       <Link
                         href="/#skills"
                         aria-label="Sign in"
@@ -136,7 +149,7 @@ export default function TopBar() {
                         Skills
                       </Link>
                     </li>
-                    <li data-aos="fade-down">
+                    <li data-aos="fade">
                       <Link
                         href="/#projects"
                         aria-label="Sign in"
@@ -146,7 +159,7 @@ export default function TopBar() {
                         Projects
                       </Link>
                     </li>
-                    <li data-aos="fade-down">
+                    <li data-aos="fade">
                       <Link
                         href="/#resume"
                         aria-label="Sign in"
@@ -156,7 +169,7 @@ export default function TopBar() {
                         Resume
                       </Link>
                     </li>
-                    <li data-aos="fade-down">
+                    <li data-aos="fade">
                       <Link
                         href="/#contactme"
                         aria-label="Sign in"
