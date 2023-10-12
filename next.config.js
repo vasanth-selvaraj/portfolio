@@ -3,6 +3,7 @@ const { generateSitemap } = require("next/server");
 
 const nextConfig = {
   reactStrictMode: true,
+  assetPrefix:'/',
   images: {
     domains: [
       "opengraph.githubassets.com",
