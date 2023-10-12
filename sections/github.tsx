@@ -25,6 +25,7 @@ export default function GitHub() {
   useEffect(() => {
     async function contibutionFetch() {
       const res = await Repos();
+      console.log(res)
       const repos = res.map(
         (repo: {
           html_url: URL;
@@ -45,14 +46,12 @@ export default function GitHub() {
   }, []);
 
   const imagesforlan: Record<string, string> = {
-    JavaScript:
-      "https://logospng.org/download/javascript/logo-javascript-icon-1024.png",
-    CSS: "https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png",
-    HTML: "https://w7.pngwing.com/pngs/201/90/png-transparent-logo-html-html5.png",
-    TypeScript:
-      "https://miro.medium.com/v2/resize:fit:256/1*iA-WRbWcbYd3BFAzzFypWg.png",
-    PHP: "https://www.php.net/images/meta-image.png",
-    MDX:"/mdx.svg"
+    JavaScript: "/Javascript.png",
+    CSS: "/css.png",
+    HTML: "/html.png",
+    TypeScript: "/ts.png",
+    PHP: "/php.png",
+    MDX: "/mdx.svg",
   };
 
   return (
@@ -133,20 +132,22 @@ export default function GitHub() {
                       <h3 className="text-sm font-medium font-sans">
                         {repos.name}
                       </h3>
-                      <img
+                      {/* <img
                         src={`https://opengraph.githubassets.com/1/vasanth-selvaraj/${repos.name}`}
                         height={150}
                         width={150}
                         className="rounded"
                         alt="repo img"
-                      />
+                      /> */}
                     </div>
                     <div className=" flex items-center">
                       <div className="pl-4 flex py-4 gap-4">
                         {repos.language !== null && (
-                          <img
+                          <Image
                             src={imagesforlan[repos.language]}
                             alt="key"
+                            height={25}
+                            width={25}
                             className="rounded h-6 w-6 flex justify-center items-center"
                           />
                         )}

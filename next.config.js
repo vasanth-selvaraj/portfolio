@@ -4,22 +4,13 @@ const { generateSitemap } = require("next/server");
 const nextConfig = {
   reactStrictMode: true,
   output: "standalone",
-  // images: {
-  //   unoptimized: true,
-  //   domains: [
-  //     "opengraph.githubassets.com",
-  //     "imagedelivery.net",
-  //     "cdn.pixabay.com",
-  //     "images.vexels.com",
-  //     "www.php.net",
-  //     "logospng.org",
-  //     "w7.pngwing.com",
-  //     "miro.medium.com",
-  //     "banner2.cleanpng.com",
-  //     "www.google.com",
-  //     "upload.wikimedia.org",
-  //   ],
-  // },
+  assetPrefix:'/',
+  images: {
+    // unoptimized: true,
+    // domains: [
+    //   "opengraph.githubassets.com",
+    // ],
+  },
 };
 
 module.exports = { nextConfig, generateSitemap };
