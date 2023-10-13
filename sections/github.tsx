@@ -25,7 +25,6 @@ export default function GitHub() {
   useEffect(() => {
     async function contibutionFetch() {
       const res = await Repos();
-      console.log(res)
       const repos = res.map(
         (repo: {
           html_url: URL;
