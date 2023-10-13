@@ -24,7 +24,7 @@ export default function Document() {
         />
         <meta name="author" content="Vasanth Selvaraj" />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://www.yourportfolio.com/" />
+        <link rel="canonical" href="https://vasanth.tech" />
         <link
           rel="icon"
           href="https://drive.google.com/uc?export=download&id=1VmcKtY39_jFUtUB_pcSjFj5VYHaPitHJ"
