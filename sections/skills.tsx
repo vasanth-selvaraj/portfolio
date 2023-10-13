@@ -21,7 +21,7 @@ export default function Skills() {
     },
     {
       name: "JavaScript",
-      image: "/javascript.png",
+      image: "/Javascript.png",
       knowledge: 80,
     },
     {
