@@ -90,7 +90,7 @@ export default function Skills() {
           {skills.map((skill, i) => {
             return (
               <div
-                data-aos={`${i % 2 == 0 ? "fade-right" : "fade-left"}`}
+                data-aos={`${i % 2 == 0 ? "fade-right" : "fade-right"}`}
                 key={i}
                 className="p-2 h-56 w-36"
               >
