@@ -32,10 +32,10 @@ export default function AboutMe() {
       <div className="flex justify-center flex-col">
         <h1 data-aos="fade-down" className="mb-10 lg:mt-20 font-sans  text-3xl tracking-wide font-bold text-text-color sm:text-5xl sm:leading-none">
           Every Line of Code Tells a <br />
-          <span className="text-accent-color">Captivating Story</span>
+          <span className="text-accent-color text-transparent bg-gradient-to-r from-gradient-start via-gradient-min to-gradient-end bg-clip-text">Captivating Story</span>
         </h1>
         <h3 data-aos="fade-down" className="inline-block max-w-5xl opacity-75 tracking-widest text-justify text-base text-maven-blue">
-          With <span className="text-3xl text-accent-color">4 years</span> of
+          With <span className="text-3xl text-accent-color text-transparent bg-gradient-to-r from-gradient-start via-gradient-min to-gradient-end bg-clip-text">4 years</span> of
           experience working with React, Express.js, and various front-end and
           back-end technologies, I have honed my skills to craft dynamic and
           visually engaging web applications. From concept to deployment, I

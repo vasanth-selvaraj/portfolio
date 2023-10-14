@@ -80,7 +80,7 @@ export default function GitHub() {
           className="py-4 text-xl font-sans text-justify"
         >
           Through the pixels of my{" "}
-          <span className="text-accent-color text-3xl">
+          <span className="text-accent-color text-transparent bg-gradient-to-r from-gradient-start via-gradient-min to-gradient-end bg-clip-text font-medium text-3xl">
             GitHub contribution map
           </span>
           , I paint the story of my coding journey, embracing the beauty of open
@@ -109,7 +109,7 @@ export default function GitHub() {
           >
             <div className="flex p-4 justify-center items-center">
               <h1 className="text-3xl font-bold">
-                My <span className="text-accent-color">Repositories</span>
+                My <span className="text-accent-color text-transparent bg-gradient-to-r from-gradient-start via-gradient-min to-gradient-end bg-clip-text">Repositories</span>
               </h1>
             </div>
             {repolist.map((repos, i) => {

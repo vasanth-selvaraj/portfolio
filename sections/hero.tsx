@@ -20,7 +20,7 @@ export default function Hero() {
           className=" lg:w-1/2 flex flex-col lg:pr-10 lg:text-left text-center justify-center pr-0"
         >
           <h1 className="mb-4 lg:mt-20 font-sans  text-3xl tracking-wide font-bold text-text-color sm:text-5xl sm:leading-none">
-            Hi, I’m <span className="text-accent-color">Vasanth</span>
+            Hi, I’m <span className="text-accent-color animate-moveGradient text-transparent bg-gradient-to-r from-gradient-start via-gradient-min to-gradient-end bg-clip-text">Vasanth</span>
           </h1>
           <h3 className="inline-block tracking-widest text-justify text-base text-maven-blue">
             A passionate and driven Full Stack Web Developer with a flair for

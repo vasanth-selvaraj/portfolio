@@ -119,7 +119,7 @@ export default function TimeLine() {
             data-aos="fade-down"
             className="flex flex-col items-center col-span-1"
           >
-            <div className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
+            <div className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
