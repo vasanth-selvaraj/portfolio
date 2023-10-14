@@ -39,7 +39,7 @@ export default function Hero() {
         </div>
         <div
           data-aos="fade-down"
-          className="lg:w-1/2 flex flex-col w-16 h-80 justify-center lg:pl-0 pl-10"
+          className="lg:w-1/2 flex flex-col h-80 justify-center lg:pl-0 pl-10"
         >
           <svg
             viewBox="0 0 974 588"
