@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.nav-shadow{
-  box-shadow: 0 0 6px 1px #665DF5;
+.nav-shadow {
+  box-shadow: 0 0 6px 1px #665df5;
 }
 
 :root {
@@ -12,8 +12,8 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-.nav-shadow{
-  box-shadow: 0 0 6px 1px #665DF5;
+.nav-shadow {
+  box-shadow: 0 0 6px 1px #665df5;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,7 +34,93 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-.react-calendar-heatmap .color-scale-1 { fill: #d6e685; }
-.react-calendar-heatmap .color-scale-2 { fill: #8cc665; }
-.react-calendar-heatmap .color-scale-3 { fill: #44a340; }
-.react-calendar-heatmap .color-scale-4 { fill: #1e6823; }
+#vasanth,
+#head {
+  animation: vasanth 2s linear infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+@keyframes vasanth {
+  0%,
+  100% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(-1deg);
+  }
+}
+
+#head {
+  animation: head 2s linear infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+@keyframes head {
+  0%,
+  100% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+}
+
+#vapour{
+  animation: vapour 2s linear infinite;
+  transform-origin: top;
+  transform-box: fill-box;
+}
+
+@keyframes vapour {
+  0%,
+  100% {
+    transform: translateY(5px)
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+#vapour2{
+  animation: vapour2 2s linear infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@keyframes vapour2 {
+  0%,
+  100% {
+    transform: translateY(5px)
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+#mainbranch,#bottombranch {
+  animation: mainbranch 12s linear infinite;
+  transform-origin: left center;
+  transform-box: fill-box;
+}
+
+@keyframes mainbranch {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20%);
+  }
+}
+
+.react-calendar-heatmap .color-scale-1 {
+  fill: #d6e685;
+}
+.react-calendar-heatmap .color-scale-2 {
+  fill: #8cc665;
+}
+.react-calendar-heatmap .color-scale-3 {
+  fill: #44a340;
+}
+.react-calendar-heatmap .color-scale-4 {
+  fill: #1e6823;
+}
