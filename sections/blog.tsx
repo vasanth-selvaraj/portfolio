@@ -4,11 +4,11 @@ export default function Blog() {
   return (
     <>
       <div className="fixed hidden xl:flex bottom-5 right-16 z-50 cursor-pointer">
-        {/* <Link
+        <Link
           href="https://blog.vasanth.tech"
           target="_blank"
-          className="flex p-2 h-full w-full justify-center items-center cursor-pointer "
-        > */}
+          // className="flex p-2 h-full w-full justify-center items-center cursor-pointer "
+        >
           <svg
             viewBox="0 0 306 306"
             fill="none"
@@ -168,7 +168,7 @@ export default function Blog() {
               </g>
             </g>
           </svg> */}
-        {/* </Link> */}
+        </Link>
       </div>
     </>
   );
