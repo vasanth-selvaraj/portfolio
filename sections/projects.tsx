@@ -12,7 +12,7 @@ export default function Projects() {
   return (
     <div
       id="skills"
-      className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-20"
+      className="px-4 relative py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-20"
     >
       <div
         data-aos="fade-down"
@@ -35,8 +35,8 @@ export default function Projects() {
         <div>Projects</div>
       </div>
       <div className="max-w-5xl flex-col mt-20 flex items-center justify-center">
-        <Image src={contruct} height={500} width={500} alt="" />
-        <h1 className="py-10 text-xl font-medium">Under Development</h1>
+        {/* <Image src={contruct} height={500} width={500} alt="" />
+        <h1 className="py-10 text-xl font-medium">Under Development</h1> */}
       </div>
     </div>
   );
