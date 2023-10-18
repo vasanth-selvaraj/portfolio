@@ -229,7 +229,7 @@ export default function TimeLine() {
             data-aos="fade-down"
             className="flex flex-col col-start-3 items-center col-span-1"
           >
-            <div className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
+            <div className="h-12 w-12 flex glow-infinite justify-center items-center bg-accent-color rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -439,7 +439,7 @@ export default function TimeLine() {
         </div>
         <div className="grid grid-cols-12">
           <div className="flex flex-col col-start-4 items-center col-span-2">
-            <div data-aos="fade-down" className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
+            <div data-aos="fade-down" className="h-12 w-12 glow-infinite flex justify-center items-center bg-accent-color rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

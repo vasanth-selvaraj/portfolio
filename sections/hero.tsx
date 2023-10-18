@@ -32,7 +32,7 @@ export default function Hero() {
           </h3>
 
           <div className="flex items-center justify-center">
-            <button className=" mt-10 w-72 items-center hover:bg-gradient-to-r hover:from-gradient-start hover:via-gradient-min hover:to-gradient-end font-semibold border border-accent-color justify-center h-10 px-2 tracking-wide text-text-color transition-all ease-in-out duration-200 rounded-lg shadow-md bg-transparent focus:shadow-outline focus:outline-none">
+            <button className=" mt-10 w-72 items-center hover:bg-gradient-to-r hover:from-gradient-start hover:via-gradient-min hover:to-gradient-end font-semibold border border-accent-color justify-center h-10 px-2 tracking-wide text-text-color transition-all ease-linear duration-200 rounded-lg shadow-md bg-transparent focus:shadow-outline focus:outline-none">
               Ready to Ignite the Web?
             </button>
           </div>

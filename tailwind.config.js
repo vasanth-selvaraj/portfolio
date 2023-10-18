@@ -8,6 +8,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        glow: {
+          "0%, 100%": {
+            boxShadow: "0 0 5px rgba(102, 93, 245, 0.7)",
+          },
+          "50%": {
+            boxShadow: "0 0 20px rgba(102, 93, 245, 0.7)",
+          },
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -19,9 +29,9 @@ module.exports = {
       "main-color": "#1A1A1A",
       "accent-color": "#665DF5",
       "text-color": "#E5E7EB",
-      "gradient-start":"#665DF5",
-      "gradient-min":"#6A82FB",
-      "gradient-end":"#5D26C1",
+      "gradient-start": "#665DF5",
+      "gradient-min": "#6A82FB",
+      "gradient-end": "#5D26C1",
       line: "#575757",
     },
   },

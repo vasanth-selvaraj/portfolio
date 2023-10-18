@@ -65,7 +65,7 @@ body {
   }
 }
 
-#vapour{
+#vapour {
   animation: vapour 2s linear infinite;
   transform-origin: top;
   transform-box: fill-box;
@@ -74,14 +74,14 @@ body {
 @keyframes vapour {
   0%,
   100% {
-    transform: translateY(5px)
+    transform: translateY(5px);
   }
   50% {
     transform: translateY(-7px);
   }
 }
 
-#vapour2{
+#vapour2 {
   animation: vapour2 2s linear infinite;
   transform-origin: bottom;
   transform-box: fill-box;
@@ -90,23 +90,25 @@ body {
 @keyframes vapour2 {
   0%,
   100% {
-    transform: translateY(-8px)
+    transform: translateY(-8px);
   }
   50% {
     transform: translateY(8px);
   }
 }
-.animate-spin{
+.animate-spin {
   animation: spin 10s linear infinite;
 }
-#mainbranch,#bottombranch {
+#mainbranch,
+#bottombranch {
   animation: mainbranch 12s linear infinite;
   transform-origin: left center;
   transform-box: fill-box;
 }
 
 @keyframes mainbranch {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0);
   }
   50% {
@@ -120,6 +122,26 @@ body {
   }
   100% {
     background-position: 100% 100%;
+  }
+}
+
+.glow {
+  background-color: #665df5; /* Set your desired background color */
+  box-shadow: 0 0 10px rgba(102, 93, 245, 0.7); /* Adjust the shadow values as needed */
+}
+
+.glow-infinite {
+  background-color: #665df5; /* Set your desired background color */
+  box-shadow: 0 0 10px rgba(102, 93, 245, 0.7); /* Adjust the shadow values as needed */
+  animation: glowing 1s infinite alternate;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 10px rgba(102, 93, 245, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(102, 93, 245, 0.9);
   }
 }
 
