@@ -1,57 +1,57 @@
-import { useEffect, useState } from "react";
-import { Repos } from "@/modules/github";
+import { useEffect } from "react";
+// import { Repos } from "@/modules/github";
 import Tooltip from "@mui/material/Tooltip";
-import Link from "next/link";
+// import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 import GitHubCalendar from "react-github-calendar";
-import Image from "next/image";
+// import Image from "next/image";
 
-interface Repo {
-  id: number;
-  name: string;
-  html_url: URL;
-  language: string;
-}
+// interface Repo {
+//   id: number;
+//   name: string;
+//   html_url: URL;
+//   language: string;
+// }
 
 export default function GitHub() {
-  const [repolist, setRepoList] = useState<Repo[]>([]);
+  // const [repolist, setRepoList] = useState<Repo[]>([]);
 
   useEffect(() => {
     AOS.init({ duration: 900 });
   }, []);
 
-  useEffect(() => {
-    async function contibutionFetch() {
-      const res = await Repos();
-      const repos = res.map(
-        (repo: {
-          html_url: URL;
-          id: number;
-          name: string;
-          language: string;
-        }) => ({
-          id: repo.id,
-          name: repo.name,
-          html_url: repo.html_url,
-          language: repo.language,
-        })
-      );
-      setRepoList(repos);
-    }
+  // useEffect(() => {
+  //   async function contibutionFetch() {
+  //     const res = await Repos();
+  //     const repos = res.map(
+  //       (repo: {
+  //         html_url: URL;
+  //         id: number;
+  //         name: string;
+  //         language: string;
+  //       }) => ({
+  //         id: repo.id,
+  //         name: repo.name,
+  //         html_url: repo.html_url,
+  //         language: repo.language,
+  //       })
+  //     );
+  //     setRepoList(repos);
+  //   }
 
-    contibutionFetch();
-  }, []);
+  //   contibutionFetch();
+  // }, []);
 
-  const imagesforlan: Record<string, string> = {
-    JavaScript: "/Javascript.png",
-    CSS: "/css.png",
-    HTML: "/html.png",
-    TypeScript: "/ts.png",
-    PHP: "/php.png",
-    MDX: "/mdx.svg",
-  };
+  // const imagesforlan: Record<string, string> = {
+  //   JavaScript: "/Javascript.png",
+  //   CSS: "/css.png",
+  //   HTML: "/html.png",
+  //   TypeScript: "/ts.png",
+  //   PHP: "/php.png",
+  //   MDX: "/mdx.svg",
+  // };
 
   return (
     <div
@@ -104,7 +104,7 @@ export default function GitHub() {
               username="vasanth-selvaraj"
             />
           </div>
-          <div
+          {/* <div
             className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center md:mt-10 gap-6"
           >
             <div className="flex p-4 justify-center items-center">
@@ -131,13 +131,13 @@ export default function GitHub() {
                       <h3 className="text-sm font-medium font-sans">
                         {repos.name}
                       </h3>
-                      {/* <img
+                      <Image
                         src={`https://opengraph.githubassets.com/1/vasanth-selvaraj/${repos.name}`}
                         height={150}
                         width={150}
                         className="rounded"
                         alt="repo img"
-                      /> */}
+                      />
                     </div>
                     <div className=" flex items-center">
                       <div className="pl-4 flex py-4 gap-4">
@@ -159,7 +159,7 @@ export default function GitHub() {
                 </Link>
               );
             })}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
