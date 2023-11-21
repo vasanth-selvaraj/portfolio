@@ -13,6 +13,7 @@ export default function Document() {
           property="og:image"
           content="https://drive.google.com/uc?export=download&id=17qaAtosdLf9lcWWk3rjIKYVeKfJDO8Pp"
         />
+        <meta name="google-site-verification" content="GS9NKtAFGWa12gN64YtlBicN6ob8rEeJ68PEz2hCCDo" />
         <meta
           name="google-site-verification"
           content="x31vTQvK7B2Ral8L2f3C5o3yqslTwke_m8uhpSCeipw"
