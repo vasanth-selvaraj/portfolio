@@ -1,6 +1,3 @@
-import CodeThink from "../public/code-think.svg";
-import Coding from "../public/coding.svg";
-import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -9,10 +6,18 @@ export default function Hero() {
   useEffect(() => {
     AOS.init({ duration: 500 });
   }, []);
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contactme');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div
       id="home"
-      className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-12"
+      className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-12 section"
     >
       <div className="flex flex-col space-y-12 justify-between lg:flex-row lg:space-y-0">
         <div
@@ -32,7 +37,7 @@ export default function Hero() {
           </h3>
 
           <div className="flex items-center justify-center">
-            <button className=" mt-10 w-72 items-center hover:bg-gradient-to-r hover:from-gradient-start hover:via-gradient-min hover:to-gradient-end font-semibold border border-accent-color justify-center h-10 px-2 tracking-wide hover:text-[#ffff] dark:text-text-color text-light-text-color transition-all ease-linear duration-200 rounded-lg shadow-md bg-transparent focus:shadow-outline focus:outline-none">
+            <button onClick={scrollToContact} className=" mt-10 w-72 items-center hover:bg-gradient-to-r hover:from-gradient-start hover:via-gradient-min hover:to-gradient-end font-semibold border border-accent-color justify-center h-10 px-2 tracking-wide hover:text-[#ffff] dark:text-text-color text-light-text-color transition-all ease-linear duration-200 rounded-lg shadow-md bg-transparent focus:shadow-outline focus:outline-none">
               Ready to Ignite the Web?
             </button>
           </div>

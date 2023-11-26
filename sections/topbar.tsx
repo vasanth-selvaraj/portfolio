@@ -13,6 +13,14 @@ export default function TopBar() {
     AOS.init({ duration: 100 });
   }, []);
 
+  const scrollToView = (value: string) => {
+    const contactSection = document.getElementById(value);
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <div className="w-full xl:relative xl:shadow-none sticky dark:bg-main-color bg-light-main-color z-50 top-0 shadow-2xl">
       <div className="flex p-4 justify-between md:px-14 px-8 pt-3 ">
@@ -72,8 +80,8 @@ export default function TopBar() {
               <div className="p-5 dark:bg-main-color bg-light-main-color nav-shadow shadow-accent-color rounded">
                 <div className="flex items-center justify-between mb-4">
                   <div>
-                    <Link
-                      href="/"
+                    <div
+                      onClick={() => scrollToView("home")}
                       aria-label="Company"
                       title="Company"
                       className="inline-flex items-center"
@@ -86,7 +94,7 @@ export default function TopBar() {
                           height={100}
                         />
                       </div>
-                    </Link>
+                    </div>
                   </div>
                   <div>
                     <button
@@ -116,66 +124,54 @@ export default function TopBar() {
                       </Link>
                     </li>
                     <li data-aos="fade">
-                      <Link
-                        onClick={() => setIsMenuOpen(false)}
-                        href="/"
+                      <div
+                        onClick={() => scrollToView("home")}
                         className="font-medium tracking-wide transition-colors duration-200 "
                       >
                         Home
-                      </Link>
+                      </div>
                     </li>
                     <li data-aos="fade">
-                      <Link
-                        onClick={() => setIsMenuOpen(false)}
-                        href="/#aboutme"
+                      <div
+                        onClick={() => scrollToView("aboutme")}
                         className="font-medium tracking-wide transition-colors duration-200 "
                       >
                         About Me
-                      </Link>
+                      </div>
                     </li>
                     <li data-aos="fade">
-                      <Link
-                        onClick={() => setIsMenuOpen(false)}
-                        href="/#timeline"
+                      <div
+                        onClick={() => scrollToView("timeline")}
                         aria-label="About us"
                         title="About us"
                         className="font-medium tracking-wide transition-colors duration-200"
                       >
                         TimeLine
-                      </Link>
+                      </div>
                     </li>
                     <li data-aos="fade">
-                      <Link
-                        onClick={() => setIsMenuOpen(false)}
-                        href="/#github"
-                        aria-label="Sign in"
-                        title="Sign in"
+                      <div
+                        onClick={() => scrollToView("github")}
                         className="font-medium tracking-wide transition-colors duration-200"
                       >
                         Github
-                      </Link>
+                      </div>
                     </li>
                     <li data-aos="fade">
-                      <Link
-                        onClick={() => setIsMenuOpen(false)}
-                        href="/#skills"
-                        aria-label="Sign in"
-                        title="Sign in"
+                      <div
+                        onClick={() => scrollToView("skills")}
                         className="font-medium tracking-wide transition-colors duration-200"
                       >
                         Skills
-                      </Link>
+                      </div>
                     </li>
                     <li data-aos="fade">
-                      <Link
-                        onClick={() => setIsMenuOpen(false)}
-                        href="/#projects"
-                        aria-label="Sign in"
-                        title="Sign in"
+                      <div
+                        onClick={() => scrollToView("projects")}
                         className="font-medium tracking-wide transition-colors duration-200"
                       >
                         Projects
-                      </Link>
+                      </div>
                     </li>
                     <li data-aos="fade">
                       <Link
@@ -190,15 +186,12 @@ export default function TopBar() {
                       </Link>
                     </li>
                     <li data-aos="fade">
-                      <Link
-                        onClick={() => setIsMenuOpen(false)}
-                        href="/#contactme"
-                        aria-label="Sign in"
-                        title="Sign in"
+                      <div
+                        onClick={() => scrollToView("contactme")}
                         className="font-medium tracking-wide transition-colors duration-200"
                       >
                         Contact Me
-                      </Link>
+                      </div>
                     </li>
                   </ul>
                 </nav>

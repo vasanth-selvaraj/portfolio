@@ -10,7 +10,7 @@ export default function TimeLine() {
   return (
     <div
       id="timeline"
-      className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-14"
+      className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-14 section"
     >
       <div data-aos="fade-down" className="flex border border-line w-32 justify-between rounded-3xl px-4 py-1 mb-20">
         <svg

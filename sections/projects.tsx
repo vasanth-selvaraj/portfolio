@@ -13,7 +13,7 @@ export default function Projects() {
   return (
     <div
       id="projects"
-      className="px-4 relative py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-20"
+      className="px-4 relative py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-20 section"
     >
       <div
         data-aos="fade-down"

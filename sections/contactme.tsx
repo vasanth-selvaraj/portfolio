@@ -20,8 +20,28 @@ export default function ContactMe() {
     return (
       <div
         id="contactme"
-        className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-20"
+        className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-20 section"
       >
+        <div
+          data-aos="fade-down"
+          className="flex border mb-6 border-line w-36 justify-between rounded-3xl px-4 py-1"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+            />
+          </svg>
+          <div>Contact Me</div>
+        </div>
         <div className="h-full w-full flex items-center flex-col gap-3">
           <h1 className="text-2xl text-center font-medium">
             {messages[randomIndex]}{" "}
@@ -38,6 +58,26 @@ export default function ContactMe() {
         id="contactme"
         className="px-1 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-20"
       >
+        <div
+          data-aos="fade-down"
+          className="flex border items-center mb-6 border-line w-36 justify-between rounded-3xl px-4 py-1"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="w-5 h-5"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+            />
+          </svg>
+          <div>Contact Me</div>
+        </div>
         <div className="h-full w-full flex items-center flex-col gap-4">
           <h1 className="font-semibold text-3xl">Lets Get Started!</h1>
           <div className="p-4 py-10 w-[80%] flex justify-center dark:bg-[#262626] shadow-2xl rounded-xl">

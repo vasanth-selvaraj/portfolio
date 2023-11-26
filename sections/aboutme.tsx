@@ -10,7 +10,7 @@ export default function AboutMe() {
   return (
     <div
       id="aboutme"
-      className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-28"
+      className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-28 section"
     >
       <div data-aos="fade-down" className="flex border mb-6 border-line w-36 justify-between rounded-3xl px-4 py-1">
         <svg

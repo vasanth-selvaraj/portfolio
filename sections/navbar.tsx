@@ -1,20 +1,71 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
+  const scrollToView = (value: string) => {
+    const contactSection = document.getElementById(value);
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const [activesection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll(".section");
+      const windowHeight = window.innerHeight;
+
+      let maxVisibleArea = 0;
+      let activeSectionId = "";
+
+      sections.forEach((section) => {
+        const bounding = section.getBoundingClientRect();
+        const visibleArea =
+          Math.min(windowHeight, bounding.bottom) - Math.max(0, bounding.top);
+
+          console.log(windowHeight,maxVisibleArea,bounding.top,bounding.bottom)
+        if (visibleArea > maxVisibleArea || bounding.bottom === windowHeight) {
+          maxVisibleArea = visibleArea;
+          activeSectionId = section.id;
+        }
+      });
+      setActiveSection(activeSectionId);
+
+      // Rest of your logic to handle the active section
+      // Add or remove classes to indicate the active section
+    };
+
+    // Execute only in the browser environment
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+      handleScroll(); // Initial check on component mount
+    }
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, []);
+
   return (
     <>
       <div className="fixed hidden z-50 dark:bg-main-color bg-light-main-color xl:flex items-center top-[50%] transform -translate-y-1/2 justify-center right-[68px] dark:text-text-color text-light-text-color">
         <div className="border-line dark:border-[#737373] border px-4 py-2 shadow-md rounded-3xl">
           <ul className="flex flex-col py-2">
-            <li className="py-4 relative group">
-              <Link href="/">
+            <li className="py-4 relative group cursor-pointer">
+              <div onClick={() => scrollToView("home")}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="w-5 h-5 hover:text-accent-color transition-colors duration-150"
+                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
+                    activesection === "home" ? "text-accent-color" : ""
+                  }`}
                 >
                   <path
                     strokeLinecap="round"
@@ -25,17 +76,19 @@ export default function Navbar() {
                 <span className="absolute hidden group-hover:flex top-[25%] -left-5 -translate-x-full px-2 py-1 bg-gray-700 rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:top-1/2 before:left-[100%] before:-translate-y-1/2 before:border-[7px] dark:bg-[#404042] bg-[#e4e4e7] before:border-y-transparent before:border-r-transparent before:dark:border-l-[#404042] before:border-l-[#e4e4e7]">
                   Home
                 </span>
-              </Link>
+              </div>
             </li>
-            <li className="py-4 relative group">
-              <Link href="/#aboutme">
+            <li className="py-4 relative group cursor-pointer">
+              <div onClick={() => scrollToView("aboutme")}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="w-5 h-5 hover:text-accent-color transition-colors duration-150"
+                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
+                    activesection === "aboutme" ? "text-accent-color" : ""
+                  }`}
                 >
                   <path
                     strokeLinecap="round"
@@ -46,17 +99,19 @@ export default function Navbar() {
                 <span className="absolute hidden group-hover:flex w-20 top-[25%] -left-5 -translate-x-full px-2 py-1 bg-gray-700 rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:top-1/2 before:left-[100%] before:-translate-y-1/2 before:border-[7px] dark:bg-[#404042] bg-[#e4e4e7] shadow-md before:border-y-transparent before:border-r-transparent before:border-l-[#e4e4e7] before:dark:border-l-[#404042]">
                   About Me
                 </span>
-              </Link>
+              </div>
             </li>
-            <li className="py-4 relative group">
-              <Link href="/#timeline">
+            <li className="py-4 relative group cursor-pointer">
+              <div onClick={() => scrollToView("timeline")}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="w-5 h-5 hover:text-accent-color transition-colors duration-150"
+                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
+                    activesection === "timeline" ? "text-accent-color" : ""
+                  }`}
                 >
                   <path
                     strokeLinecap="round"
@@ -67,15 +122,17 @@ export default function Navbar() {
                 <span className="absolute hidden group-hover:flex w-[75px] top-[25%] -left-5 -translate-x-full px-2 py-1 bg-gray-700 rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:top-1/2 before:left-[100%] before:-translate-y-1/2 before:border-[7px] dark:bg-[#404042] bg-[#e4e4e7] before:border-y-transparent before:border-r-transparent before:dark:border-l-[#404042] before:border-l-[#e4e4e7]">
                   Time line
                 </span>
-              </Link>
+              </div>
             </li>
-            <li className="py-4 relative group">
-              <Link href="/#github">
+            <li className="py-4 relative group cursor-pointer">
+              <div onClick={() => scrollToView("github")}>
                 <svg
                   aria-hidden="true"
                   focusable="false"
                   role="img"
-                  className="inline-block text-end octicon octicon-mark-github w-5 h-5 hover:text-accent-color transition-colors duration-150"
+                  className={`inline-block text-end octicon octicon-mark-github w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
+                    activesection === "github" && "text-accent-color"
+                  }`}
                   viewBox="0 0 16 16"
                   fill="currentColor"
                 >
@@ -85,17 +142,19 @@ export default function Navbar() {
                 <span className="absolute hidden group-hover:flex w-18 top-[25%] -left-5 -translate-x-full px-2 py-1 bg-gray-700 rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:top-1/2 before:left-[100%] before:-translate-y-1/2 before:border-[7px] dark:bg-[#404042] bg-[#e4e4e7] before:border-y-transparent before:border-r-transparent before:dark:border-l-[#404042] before:border-l-[#e4e4e7]">
                   Github
                 </span>
-              </Link>
+              </div>
             </li>
-            <li className="py-4 relative group">
-              <Link href="/#skills">
+            <li className="py-4 relative group cursor-pointer">
+              <div onClick={() => scrollToView("skills")}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="w-5 h-5 hover:text-accent-color transition-colors duration-150"
+                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
+                    activesection === "skills" ? "text-accent-color" : ""
+                  }`}
                 >
                   <path
                     strokeLinecap="round"
@@ -106,17 +165,19 @@ export default function Navbar() {
                 <span className="absolute hidden group-hover:flex w-12 top-[25%] -left-5 -translate-x-full px-2 py-1 bg-gray-700 rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:top-1/2 before:left-[100%] before:-translate-y-1/2 before:border-[7px] dark:bg-[#404042] bg-[#e4e4e7] before:border-y-transparent before:border-r-transparent before:dark:border-l-[#404042] before:border-l-[#e4e4e7]">
                   Skills
                 </span>
-              </Link>
+              </div>
             </li>
-            <li className="py-4 relative group">
-              <Link href="/#projects">
+            <li className="py-4 relative group cursor-pointer">
+              <div onClick={() => scrollToView("projects")}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="w-5 h-5 hover:text-accent-color transition-colors duration-150"
+                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
+                    activesection === "projects" ? "text-accent-color" : ""
+                  }`}
                 >
                   <path
                     strokeLinecap="round"
@@ -127,9 +188,9 @@ export default function Navbar() {
                 <span className="absolute hidden group-hover:flex w-16 top-[25%] -left-5 -translate-x-full px-2 py-1 bg-gray-700 rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:top-1/2 before:left-[100%] before:-translate-y-1/2 before:border-[7px] dark:bg-[#404042] bg-[#e4e4e7] before:border-y-transparent before:border-r-transparent before:dark:border-l-[#404042] before:border-l-[#e4e4e7]">
                   Projects
                 </span>
-              </Link>
+              </div>
             </li>
-            <li className="py-4 relative group">
+            <li className="py-4 relative group cursor-pointer">
               <Link
                 href="https://drive.google.com/uc?export=download&id=1Dybcn9_912dUx5j6v_WEzddHWhIWLzkP"
                 target="_blank"
@@ -153,15 +214,17 @@ export default function Navbar() {
                 </span>
               </Link>
             </li>
-            <li className="py-4 relative group">
-              <Link href="/#resume">
+            <li className="py-4 relative group cursor-pointer">
+              <div onClick={()=>scrollToView("contactme")}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="w-5 h-5 hover:text-accent-color transition-colors duration-150"
+                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
+                    activesection === "contactme" ? "text-accent-color" : ""
+                  }`}
                 >
                   <path
                     strokeLinecap="round"
@@ -172,7 +235,7 @@ export default function Navbar() {
                 <span className="absolute hidden group-hover:flex w-[95px] top-[25%] -left-5 -translate-x-full px-2 py-1 bg-gray-700 rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:top-1/2 before:left-[100%] before:-translate-y-1/2 before:border-[7px] dark:bg-[#404042] bg-[#e4e4e7] before:border-y-transparent before:border-r-transparent before:dark:border-l-[#404042] before:border-l-[#e4e4e7]">
                   Contact Me
                 </span>
-              </Link>
+              </div>
             </li>
           </ul>
         </div>
