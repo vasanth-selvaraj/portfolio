@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Tooltip from "@mui/material/Tooltip";
 // import Link from "next/link";
 import AOS from "aos";
+import { useTheme } from "next-themes";
 import "aos/dist/aos.css";
 
 import GitHubCalendar from "react-github-calendar";
@@ -18,6 +19,7 @@ import GitHubCalendar from "react-github-calendar";
 export default function GitHub() {
   // const [repolist, setRepoList] = useState<Repo[]>([]);
 
+  const { theme } = useTheme();
   useEffect(() => {
     AOS.init({ duration: 900 });
   }, []);
@@ -92,7 +94,7 @@ export default function GitHub() {
             className=" py-8 flex flex-col justify-center rounded"
           >
             <GitHubCalendar
-              colorScheme={"dark"}
+              colorScheme={theme==="light"?"light":"dark"}
               renderBlock={(block, activity) => (
                 <Tooltip
                   followCursor

@@ -9,11 +9,12 @@
     "lint": "next lint",
     "deploy": "next build && next export && gh-pages -d out",
     "predeploy": "npm run build",
-    "postbuild" :"next-sitemap"
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@formspree/react": "^2.5.1",
     "@mui/icons-material": "^5.14.3",
     "@types/node": "20.4.5",
     "@types/react": "18.2.18",
@@ -24,6 +25,7 @@
     "eslint-config-next": "13.4.12",
     "next": "13.4.12",
     "next-sitemap": "^4.2.3",
+    "next-themes": "^0.2.1",
     "postcss": "8.4.27",
     "react": "18.2.0",
     "react-calendar-heatmap": "^1.9.0",

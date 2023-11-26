@@ -2,11 +2,14 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
 import { useEffect } from "react";
+import { useTheme } from "next-themes";
 
 export default function Skills() {
   useEffect(() => {
     AOS.init({ duration: 900 });
   }, []);
+
+  const { theme } = useTheme();
 
   const skills = [
     {
@@ -16,7 +19,7 @@ export default function Skills() {
     },
     {
       name: "ExpressJs",
-      image: "/expressJs-white.png",
+      image: theme==="light"?"/expressJs-black.png":"/expressJs-white.png",
       knowledge: 80,
     },
     {
@@ -32,7 +35,7 @@ export default function Skills() {
     },
     {
       name: "NextJs",
-      image: "/nextjs-white.png",
+      image: theme==="light"?"/nextjs-black.png":"/nextjs-white.png",
       knowledge: 50,
     },
     {
@@ -60,7 +63,7 @@ export default function Skills() {
   return (
     <div
       id="skills"
-      className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-20"
+      className="px-4 py-16 mx-auto sm:max-w-xl text-light-text-color dark:text-text-color md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-20"
     >
       <div
         data-aos="fade-down"
@@ -99,10 +102,10 @@ export default function Skills() {
                     height={80}
                     width={80}
                     alt="skill"
-                    className="rounded-xl p-2"
+                    className="rounded-xl p-2 opacity-75"
                     src={skill.image}
                   />
-                  <h1 className="text-text-color py-2 text-xl font-medium">
+                  <h1 className="dark:text-text-color text-light-text-color py-2 text-xl font-medium">
                     {skill.knowledge}%
                   </h1>
                 </div>

@@ -30,7 +30,7 @@ export default function AboutMe() {
         <div>About Me</div>
       </div>
       <div className="flex justify-center flex-col">
-        <h1 data-aos="fade-down" className="mb-10 lg:mt-20 font-sans  text-3xl tracking-wide font-bold text-text-color sm:text-5xl sm:leading-none">
+        <h1 data-aos="fade-down" className="mb-10 lg:mt-20 font-sans  text-3xl tracking-wide font-bold dark:text-text-color text-[#404040] sm:text-5xl sm:leading-none">
           Every Line of Code Tells a <br />
           <span className="text-accent-color text-transparent bg-gradient-to-r from-gradient-start via-gradient-min to-gradient-end bg-clip-text">Captivating Story</span>
         </h1>

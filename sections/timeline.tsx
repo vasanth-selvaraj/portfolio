@@ -19,7 +19,7 @@ export default function TimeLine() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="w-6 h-6"
+          className="w-6 h-6 dark:text-text-color text-line"
         >
           <path
             strokeLinecap="round"
@@ -49,7 +49,7 @@ export default function TimeLine() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-6 h-6 text-text-color"
               >
                 <path
                   strokeLinecap="round"
@@ -58,7 +58,7 @@ export default function TimeLine() {
                 />
               </svg>
             </div>
-            <div className="w-[2px] h-16 bg-[#ffff]"></div>
+            <div className="w-[2px] h-16 dark:bg-[#ffff] bg-line"></div>
           </div>
           <div data-aos="fade-right" className="col-span-3">
             <div className="rounded border border-line">
@@ -90,7 +90,7 @@ export default function TimeLine() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-6 h-6 text-text-color"
               >
                 <path
                   strokeLinecap="round"
@@ -99,7 +99,7 @@ export default function TimeLine() {
                 />
               </svg>
             </div>
-            <div className="w-[2px] h-16 bg-[#ffff]"></div>
+            <div className="w-[2px] h-16 dark:bg-[#ffff] bg-line"></div>
           </div>
           <h3
             data-aos="fade-right"
@@ -126,7 +126,7 @@ export default function TimeLine() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-6 h-6 text-text-color"
               >
                 <path
                   strokeLinecap="round"
@@ -135,7 +135,7 @@ export default function TimeLine() {
                 />
               </svg>
             </div>
-            <div className="w-[2px] h-16 bg-[#ffff]"></div>
+            <div className="w-[2px] h-16 dark:bg-[#ffff] bg-line"></div>
           </div>
           <div data-aos="fade-right" className="col-span-3">
             <div className="rounded border border-line">
@@ -167,7 +167,7 @@ export default function TimeLine() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-6 h-6 text-text-color"
               >
                 <path
                   strokeLinecap="round"
@@ -176,7 +176,7 @@ export default function TimeLine() {
                 />
               </svg>
             </div>
-            <div className="w-[2px] h-16 bg-[#ffff]"></div>
+            <div className="w-[2px] h-16 dark:bg-[#ffff] bg-line"></div>
           </div>
           <h3
             data-aos="fade-right"
@@ -203,7 +203,7 @@ export default function TimeLine() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-6 h-6 text-text-color"
               >
                 <path
                   strokeLinecap="round"
@@ -212,7 +212,7 @@ export default function TimeLine() {
                 />
               </svg>
             </div>
-            <div className="w-[2px] h-28 bg-[#ffff]"></div>
+            <div className="w-[2px] h-28 dark:bg-[#ffff] bg-line"></div>
           </div>
           <div data-aos="fade-right" className="col-span-3">
             <div className="rounded border border-line">
@@ -236,7 +236,7 @@ export default function TimeLine() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-6 h-6 text-text-color"
               >
                 <path
                   strokeLinecap="round"
@@ -245,7 +245,7 @@ export default function TimeLine() {
                 />
               </svg>
             </div>
-            {/* <div className="w-[2px] h-16 bg-[#ffff]"></div> */}
+            {/* <div className="w-[2px] h-16 dark:bg-[#ffff] bg-line"></div> */}
           </div>
         </div>
         <div className="flex justify-center pt-5">
@@ -276,7 +276,7 @@ export default function TimeLine() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-6 h-6 text-text-color"
               >
                 <path
                   strokeLinecap="round"
@@ -285,7 +285,7 @@ export default function TimeLine() {
                 />
               </svg>
             </div>
-            <div className="w-[2px] h-24 bg-[#ffff]"></div>
+            <div className="w-[2px] h-24 dark:bg-[#ffff] bg-line"></div>
           </div>
           <div className="col-span-7">
             <div data-aos="fade-right" className="rounded border border-line">
@@ -311,7 +311,7 @@ export default function TimeLine() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-6 h-6 text-text-color"
               >
                 <path
                   strokeLinecap="round"
@@ -320,7 +320,7 @@ export default function TimeLine() {
                 />
               </svg>
             </div>
-            <div className="w-[2px] h-24 bg-[#ffff]"></div>
+            <div className="w-[2px] h-24 dark:bg-[#ffff] bg-line"></div>
           </div>
           <div className="col-span-7">
             <div data-aos="fade-right" className="rounded border border-line">
@@ -346,7 +346,7 @@ export default function TimeLine() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-6 h-6 text-text-color"
               >
                 <path
                   strokeLinecap="round"
@@ -355,7 +355,7 @@ export default function TimeLine() {
                 />
               </svg>
             </div>
-            <div className="w-[2px] h-24 bg-[#ffff]"></div>
+            <div className="w-[2px] h-24 dark:bg-[#ffff] bg-line"></div>
           </div>
           <div className="col-span-7">
             <div data-aos="fade-right" className="rounded border border-line">
@@ -381,7 +381,7 @@ export default function TimeLine() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-6 h-6 text-text-color"
               >
                 <path
                   strokeLinecap="round"
@@ -390,7 +390,7 @@ export default function TimeLine() {
                 />
               </svg>
             </div>
-            <div className="w-[2px] h-24 bg-[#ffff]"></div>
+            <div className="w-[2px] h-24 dark:bg-[#ffff] bg-line"></div>
           </div>
           <div className="col-span-7">
             <div data-aos="fade-right" className="rounded border border-line">
@@ -416,7 +416,7 @@ export default function TimeLine() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-6 h-6 text-text-color"
               >
                 <path
                   strokeLinecap="round"
@@ -425,7 +425,7 @@ export default function TimeLine() {
                 />
               </svg>
             </div>
-            <div className="w-[2px] h-32 bg-[#ffff]"></div>
+            <div className="w-[2px] h-32 dark:bg-[#ffff] bg-line"></div>
           </div>
           <div className="col-span-7">
             <div data-aos="fade-right" className="rounded border border-line">
@@ -446,7 +446,7 @@ export default function TimeLine() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-6 h-6 text-text-color"
               >
                 <path
                   strokeLinecap="round"
@@ -455,7 +455,7 @@ export default function TimeLine() {
                 />
               </svg>
             </div>
-            {/* <div className="w-[2px] h-16 bg-[#ffff]"></div> */}
+            {/* <div className="w-[2px] h-16 dark:bg-[#ffff] bg-line"></div> */}
           </div>
         </div>
         <div className="flex justify-center pt-5">

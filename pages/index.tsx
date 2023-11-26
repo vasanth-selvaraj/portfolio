@@ -7,6 +7,7 @@ import GitHub from "@/sections/github";
 import TimeLine from "@/sections/timeline";
 import Skills from "@/sections/skills";
 import Projects from "@/sections/projects";
+import ContactMe from "@/sections/contactme";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function Home() {
       <GitHub />
       <Skills />
       <Projects />
+      <ContactMe />
     </main>
   );
 }

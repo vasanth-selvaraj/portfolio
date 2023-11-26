@@ -13,7 +13,10 @@ export default function Document() {
           property="og:image"
           content="https://drive.google.com/uc?export=download&id=17qaAtosdLf9lcWWk3rjIKYVeKfJDO8Pp"
         />
-        <meta name="google-site-verification" content="GS9NKtAFGWa12gN64YtlBicN6ob8rEeJ68PEz2hCCDo" />
+        <meta
+          name="google-site-verification"
+          content="GS9NKtAFGWa12gN64YtlBicN6ob8rEeJ68PEz2hCCDo"
+        />
         <meta
           name="google-site-verification"
           content="x31vTQvK7B2Ral8L2f3C5o3yqslTwke_m8uhpSCeipw"
@@ -21,7 +24,7 @@ export default function Document() {
         <meta property="og:url" content="https://vasanth.tech" />
         <meta
           name="keyword"
-          content="Next.js, Portfolio, Web Development, JavaScript, Vasanth Selvaraj,Vasanth, vasanth, Web developer, MERN stack, Devops, Git"
+          content="Next.js, Portfolio, vasanth's portfolio,vasanth tech, vasanth.tech, vasanth selvaraj, Web Development, JavaScript, Vasanth Selvaraj,Vasanth, vasanth, Web developer, MERN stack, Devops, Git"
         />
         <meta name="author" content="Vasanth Selvaraj" />
         <meta property="og:type" content="website" />

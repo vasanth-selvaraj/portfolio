@@ -19,7 +19,7 @@ export default function Hero() {
           data-aos="fade-up"
           className=" lg:w-1/2 flex flex-col lg:pr-10 lg:text-left text-center justify-center pr-0"
         >
-          <h1 className="mb-4 lg:mt-20 font-sans  text-3xl tracking-wide font-bold text-text-color sm:text-5xl sm:leading-none">
+          <h1 className="mb-4 lg:mt-20 font-sans  text-3xl tracking-wide font-bold dark:text-text-color text-[#404040] sm:text-5xl sm:leading-none">
             Hi, I’m <span className="text-accent-color animate-moveGradient text-transparent bg-gradient-to-r from-gradient-start via-gradient-min to-gradient-end bg-clip-text">Vasanth</span>
           </h1>
           <h3 className="inline-block tracking-widest text-justify text-base text-maven-blue">
@@ -32,7 +32,7 @@ export default function Hero() {
           </h3>
 
           <div className="flex items-center justify-center">
-            <button className=" mt-10 w-72 items-center hover:bg-gradient-to-r hover:from-gradient-start hover:via-gradient-min hover:to-gradient-end font-semibold border border-accent-color justify-center h-10 px-2 tracking-wide text-text-color transition-all ease-linear duration-200 rounded-lg shadow-md bg-transparent focus:shadow-outline focus:outline-none">
+            <button className=" mt-10 w-72 items-center hover:bg-gradient-to-r hover:from-gradient-start hover:via-gradient-min hover:to-gradient-end font-semibold border border-accent-color justify-center h-10 px-2 tracking-wide hover:text-[#ffff] dark:text-text-color text-light-text-color transition-all ease-linear duration-200 rounded-lg shadow-md bg-transparent focus:shadow-outline focus:outline-none">
               Ready to Ignite the Web?
             </button>
           </div>

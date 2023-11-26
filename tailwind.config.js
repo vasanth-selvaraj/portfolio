@@ -27,6 +27,8 @@ module.exports = {
     colors: {
       transparent: "transparent",
       "main-color": "#1A1A1A",
+      "light-main-color":"#f9fafb",
+      "light-text-color":"#404040",
       "accent-color": "#665DF5",
       "text-color": "#E5E7EB",
       "gradient-start": "#665DF5",
@@ -36,4 +38,5 @@ module.exports = {
     },
   },
   plugins: [],
+  darkMode: "class",
 };
