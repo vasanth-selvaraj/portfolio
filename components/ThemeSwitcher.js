@@ -7,6 +7,23 @@ const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
+    const t = localStorage.getItem("theme");
+    if (t) {
+      if (t === "light") {
+        setTheme("light");
+      } else {
+        setTheme("dark");
+      }
+    } else {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        setTheme("dark");
+        localStorage.setItem("theme", "dark");
+      } else {
+        setTheme("light");
+        localStorage.setItem("theme", "light");
+      }
+    }
+
     setMounted(true);
   }, []);
 
