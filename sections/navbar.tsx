@@ -23,32 +23,28 @@ export default function Navbar() {
         const bounding = section.getBoundingClientRect();
         const visibleArea =
           Math.min(windowHeight, bounding.bottom) - Math.max(0, bounding.top);
-
-          console.log(windowHeight,maxVisibleArea,bounding.top,bounding.bottom)
-        if (visibleArea > maxVisibleArea || bounding.bottom === windowHeight) {
+        if (visibleArea > maxVisibleArea) {
           maxVisibleArea = visibleArea;
+          activeSectionId = section.id;
+        } else if (bounding.bottom === windowHeight) {
           activeSectionId = section.id;
         }
       });
       setActiveSection(activeSectionId);
-
-      // Rest of your logic to handle the active section
-      // Add or remove classes to indicate the active section
     };
 
-    // Execute only in the browser environment
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", handleScroll);
-      handleScroll(); // Initial check on component mount
+      handleScroll();
     }
 
-    // Cleanup the event listener on component unmount
     return () => {
       if (typeof window !== "undefined") {
         window.removeEventListener("scroll", handleScroll);
       }
     };
   }, []);
+
 
   return (
     <>
@@ -63,9 +59,8 @@ export default function Navbar() {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
-                    activesection === "home" ? "text-accent-color" : ""
-                  }`}
+                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${activesection === "home" ? "text-accent-color" : ""
+                    }`}
                 >
                   <path
                     strokeLinecap="round"
@@ -86,9 +81,8 @@ export default function Navbar() {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
-                    activesection === "aboutme" ? "text-accent-color" : ""
-                  }`}
+                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${activesection === "aboutme" ? "text-accent-color" : ""
+                    }`}
                 >
                   <path
                     strokeLinecap="round"
@@ -109,9 +103,8 @@ export default function Navbar() {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
-                    activesection === "timeline" ? "text-accent-color" : ""
-                  }`}
+                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${activesection === "timeline" ? "text-accent-color" : ""
+                    }`}
                 >
                   <path
                     strokeLinecap="round"
@@ -130,9 +123,8 @@ export default function Navbar() {
                   aria-hidden="true"
                   focusable="false"
                   role="img"
-                  className={`inline-block text-end octicon octicon-mark-github w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
-                    activesection === "github" && "text-accent-color"
-                  }`}
+                  className={`inline-block text-end octicon octicon-mark-github w-5 h-5 hover:text-accent-color transition-colors duration-150 ${activesection === "github" && "text-accent-color"
+                    }`}
                   viewBox="0 0 16 16"
                   fill="currentColor"
                 >
@@ -152,9 +144,8 @@ export default function Navbar() {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
-                    activesection === "skills" ? "text-accent-color" : ""
-                  }`}
+                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${activesection === "skills" ? "text-accent-color" : ""
+                    }`}
                 >
                   <path
                     strokeLinecap="round"
@@ -175,9 +166,8 @@ export default function Navbar() {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
-                    activesection === "projects" ? "text-accent-color" : ""
-                  }`}
+                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${activesection === "projects" ? "text-accent-color" : ""
+                    }`}
                 >
                   <path
                     strokeLinecap="round"
@@ -215,16 +205,15 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="py-4 relative group cursor-pointer">
-              <div onClick={()=>scrollToView("contactme")}>
+              <div onClick={() => scrollToView("contactme")}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
-                    activesection === "contactme" ? "text-accent-color" : ""
-                  }`}
+                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${activesection === "contactme" ? "text-accent-color" : ""
+                    }`}
                 >
                   <path
                     strokeLinecap="round"

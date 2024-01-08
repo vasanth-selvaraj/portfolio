@@ -105,9 +105,9 @@ export default function Skills() {
                     className="rounded-xl p-2 opacity-75"
                     src={skill.image}
                   />
-                  <h1 className="dark:text-text-color text-light-text-color py-2 text-xl font-medium">
+                  {/* <h1 className="dark:text-text-color text-light-text-color py-2 text-xl font-medium">
                     {skill.knowledge}%
-                  </h1>
+                  </h1> */}
                 </div>
                 <h3 className="py-2 h-[10%] text-center">{skill.name}</h3>
               </div>

@@ -56,7 +56,7 @@ export default function ContactMe() {
     <>
       <div
         id="contactme"
-        className="px-1 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-20"
+        className="px-1 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-20 section"
       >
         <div
           data-aos="fade-down"
