@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>Vasanth`s Portfolio</title>
         <meta
           name="description"
           content="I am a passionate and creative web developer, specializing in crafting elegant and responsive websites. With a keen eye for design and a deep understanding of user experience, I strive to create engaging and user-friendly digital experiences. Explore my portfolio to see a diverse range of projects that showcase my skills in front-end development, back-end programming, and more."
@@ -28,11 +27,12 @@ export default function Document() {
         />
         <meta name="author" content="Vasanth Selvaraj" />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://vasanth.tech" />
         <link
-          rel="icon"
+          rel="apple-touch-icon"
           href="https://drive.google.com/uc?export=download&id=1VmcKtY39_jFUtUB_pcSjFj5VYHaPitHJ"
-        />
+        ></link>
+        <link rel="canonical" href="https://vasanth.tech" />
+        <link rel="icon" href="/favicon.ico" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Vasanth`s Portfolio" />
         <meta
@@ -43,7 +43,6 @@ export default function Document() {
           name="twitter:image"
           content="https://drive.google.com/uc?export=download&id=17qaAtosdLf9lcWWk3rjIKYVeKfJDO8Pp"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <body>
         <Main />

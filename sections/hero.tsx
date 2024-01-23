@@ -53,7 +53,7 @@ export default function Hero() {
           >
             <g
               id="undraw_version_control_re_mg66 1"
-              clip-path="url(#clip0_101_28)"
+              clipPath="url(#clip0_101_28)"
             >
               <g id="coffee">
                 <path

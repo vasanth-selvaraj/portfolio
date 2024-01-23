@@ -45,7 +45,6 @@ export default function Navbar() {
     };
   }, []);
 
-
   return (
     <>
       <div className="fixed hidden z-50 dark:bg-main-color bg-light-main-color xl:flex items-center top-[50%] transform -translate-y-1/2 justify-center right-[68px] dark:text-text-color text-light-text-color">
@@ -59,8 +58,9 @@ export default function Navbar() {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${activesection === "home" ? "text-accent-color" : ""
-                    }`}
+                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
+                    activesection === "home" ? "text-accent-color" : ""
+                  }`}
                 >
                   <path
                     strokeLinecap="round"
@@ -81,8 +81,9 @@ export default function Navbar() {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${activesection === "aboutme" ? "text-accent-color" : ""
-                    }`}
+                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
+                    activesection === "aboutme" ? "text-accent-color" : ""
+                  }`}
                 >
                   <path
                     strokeLinecap="round"
@@ -103,8 +104,9 @@ export default function Navbar() {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${activesection === "timeline" ? "text-accent-color" : ""
-                    }`}
+                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
+                    activesection === "timeline" ? "text-accent-color" : ""
+                  }`}
                 >
                   <path
                     strokeLinecap="round"
@@ -123,8 +125,9 @@ export default function Navbar() {
                   aria-hidden="true"
                   focusable="false"
                   role="img"
-                  className={`inline-block text-end octicon octicon-mark-github w-5 h-5 hover:text-accent-color transition-colors duration-150 ${activesection === "github" && "text-accent-color"
-                    }`}
+                  className={`inline-block text-end octicon octicon-mark-github w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
+                    activesection === "github" && "text-accent-color"
+                  }`}
                   viewBox="0 0 16 16"
                   fill="currentColor"
                 >
@@ -144,8 +147,9 @@ export default function Navbar() {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${activesection === "skills" ? "text-accent-color" : ""
-                    }`}
+                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
+                    activesection === "skills" ? "text-accent-color" : ""
+                  }`}
                 >
                   <path
                     strokeLinecap="round"
@@ -166,8 +170,9 @@ export default function Navbar() {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${activesection === "projects" ? "text-accent-color" : ""
-                    }`}
+                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
+                    activesection === "projects" ? "text-accent-color" : ""
+                  }`}
                 >
                   <path
                     strokeLinecap="round"
@@ -180,9 +185,33 @@ export default function Navbar() {
                 </span>
               </div>
             </li>
+
+            <li className="py-4 relative group cursor-pointer">
+              <div onClick={() => scrollToView("contactme")}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${
+                    activesection === "contactme" ? "text-accent-color" : ""
+                  }`}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                  />
+                </svg>
+                <span className="absolute hidden group-hover:flex w-[95px] top-[25%] -left-5 -translate-x-full px-2 py-1 bg-gray-700 rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:top-1/2 before:left-[100%] before:-translate-y-1/2 before:border-[7px] dark:bg-[#404042] bg-[#e4e4e7] before:border-y-transparent before:border-r-transparent before:dark:border-l-[#404042] before:border-l-[#e4e4e7]">
+                  Contact Me
+                </span>
+              </div>
+            </li>
             <li className="py-4 relative group cursor-pointer">
               <Link
-                href="https://drive.google.com/uc?export=download&id=1Dybcn9_912dUx5j6v_WEzddHWhIWLzkP"
+                href="/Vasanth_Selvaraj_Resume.pdf"
                 target="_blank"
               >
                 <svg
@@ -203,28 +232,6 @@ export default function Navbar() {
                   Resume
                 </span>
               </Link>
-            </li>
-            <li className="py-4 relative group cursor-pointer">
-              <div onClick={() => scrollToView("contactme")}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className={`w-5 h-5 hover:text-accent-color transition-colors duration-150 ${activesection === "contactme" ? "text-accent-color" : ""
-                    }`}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-                  />
-                </svg>
-                <span className="absolute hidden group-hover:flex w-[95px] top-[25%] -left-5 -translate-x-full px-2 py-1 bg-gray-700 rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:top-1/2 before:left-[100%] before:-translate-y-1/2 before:border-[7px] dark:bg-[#404042] bg-[#e4e4e7] before:border-y-transparent before:border-r-transparent before:dark:border-l-[#404042] before:border-l-[#e4e4e7]">
-                  Contact Me
-                </span>
-              </div>
             </li>
           </ul>
         </div>

@@ -176,7 +176,7 @@ export default function TopBar() {
                     <li data-aos="fade">
                       <Link
                         onClick={() => setIsMenuOpen(false)}
-                        href="https://drive.google.com/uc?export=download&id=1Dybcn9_912dUx5j6v_WEzddHWhIWLzkP"
+                        href="/Vasanth_Selvaraj_Resume.pdf"
                         target="_blank"
                         aria-label="Sign in"
                         title="Sign in"
