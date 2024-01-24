@@ -13,6 +13,7 @@ export default function Layout({ children }: LayoutProps) {
     <Providers>
       <Head>
         <title>Vasanth`s Portfolio</title>
+        <link rel="manifest" href="/manifest.json" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className="layout dark:bg-main-color bg-light-main-color text-light-text-color dark:text-text-color">
