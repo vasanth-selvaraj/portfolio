@@ -27,10 +27,8 @@ export default function Document() {
         />
         <meta name="author" content="Vasanth Selvaraj" />
         <meta property="og:type" content="website" />
-        <link
-          rel="apple-touch-icon"
-          href="https://drive.google.com/uc?export=download&id=1VmcKtY39_jFUtUB_pcSjFj5VYHaPitHJ"
-        ></link>
+        <link rel="apple-touch-icon" href="/memoji.png"></link>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://vasanth.tech" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="twitter:card" content="summary_large_image" />
