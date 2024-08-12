@@ -1,5 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+# igonore files
 # dependencies
 /node_modules
 /.pnp
@@ -18,7 +18,7 @@
 # misc
 .DS_Store
 *.pem
-
+# ignore
 # debug
 npm-debug.log*
 yarn-debug.log*
