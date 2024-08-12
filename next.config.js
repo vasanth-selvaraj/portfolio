@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+// new updates
 const { generateSitemap } = require("next/server");
 
 const nextConfig = {
