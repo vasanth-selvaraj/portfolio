@@ -12,7 +12,10 @@ export default function TimeLine() {
       id="timeline"
       className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-14 section"
     >
-      <div data-aos="fade-down" className="flex border border-line w-32 justify-between rounded-3xl px-4 py-1 mb-20">
+      <div
+        data-aos="fade-down"
+        className="flex border border-line w-32 justify-between rounded-3xl px-4 py-1 mb-20"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -224,6 +227,45 @@ export default function TimeLine() {
             </div>
           </div>
         </div>
+        <div className="grid grid-cols-7">
+          <div data-aos="fade-right" className="col-span-3">
+            <div className="rounded border border-line">
+              <h3 className="p-4">
+                Recognized for my dedication and contributions, I was promoted
+                to the position of Solution Architect at Mavenberg Innovations
+              </h3>
+            </div>
+          </div>
+
+          <div
+            data-aos="fade-down"
+            className="flex flex-col items-center col-span-1"
+          >
+            <div className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-6 h-6 text-text-color"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"
+                />
+              </svg>
+            </div>
+            <div className="w-[2px] h-16 dark:bg-[#ffff] bg-line"></div>
+          </div>
+          <h3
+            data-aos="fade-right"
+            className=" col-span-3 py-4 flex justify-start"
+          >
+            April 2024
+          </h3>
+        </div>
         <div className="grid grid-cols-5">
           <div
             data-aos="fade-down"
@@ -269,7 +311,10 @@ export default function TimeLine() {
             March 2019
           </h3>
           <div className="flex flex-col items-center col-span-2">
-            <div data-aos="fade-down" className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
+            <div
+              data-aos="fade-down"
+              className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -304,7 +349,10 @@ export default function TimeLine() {
             June 2019
           </h3>
           <div className="flex flex-col items-center col-span-2">
-            <div data-aos="fade-down" className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
+            <div
+              data-aos="fade-down"
+              className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -339,7 +387,10 @@ export default function TimeLine() {
             September 2019
           </h3>
           <div className="flex flex-col items-center col-span-2">
-            <div data-aos="fade-down" className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
+            <div
+              data-aos="fade-down"
+              className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -374,7 +425,10 @@ export default function TimeLine() {
             March 2021
           </h3>
           <div className="flex flex-col items-center col-span-2">
-            <div data-aos="fade-down" className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
+            <div
+              data-aos="fade-down"
+              className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -409,7 +463,10 @@ export default function TimeLine() {
             September 2022
           </h3>
           <div className="flex flex-col items-center col-span-2">
-            <div data-aos="fade-down" className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full">
+            <div
+              data-aos="fade-down"
+              className="h-12 w-12 flex justify-center items-center bg-accent-color rounded-full"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -439,7 +496,10 @@ export default function TimeLine() {
         </div>
         <div className="grid grid-cols-12">
           <div className="flex flex-col col-start-4 items-center col-span-2">
-            <div data-aos="fade-down" className="h-12 w-12 glow-infinite flex justify-center items-center bg-accent-color rounded-full">
+            <div
+              data-aos="fade-down"
+              className="h-12 w-12 glow-infinite flex justify-center items-center bg-accent-color rounded-full"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -459,7 +519,10 @@ export default function TimeLine() {
           </div>
         </div>
         <div className="flex justify-center pt-5">
-          <div data-aos="fade-down" className="rounded border border-line max-w-5xl">
+          <div
+            data-aos="fade-down"
+            className="rounded border border-line max-w-5xl"
+          >
             <h3 className="p-4">
               Thriving at Mavenberg, I'm driven to push the boundaries of web
               development and shape the future of the digital landscape
