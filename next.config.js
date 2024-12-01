@@ -5,7 +5,7 @@ const { generateSitemap } = require("next/server");
 const nextConfig = {
   reactStrictMode: true,
   output: "standalone",
-  assetPrefix:'/',
+  assetPrefix: "/portfolio",
   images: {
     // unoptimized: true,
     // domains: [
