@@ -117,7 +117,7 @@ export default function TopBar() {
                     <li data-aos="fade">
                       <Link
                         target="_blank"
-                        href="https://blog.vasanth.tech"
+                        href="https://vasanth-selvaraj.github.io/my-blog/"
                         className="font-medium text-xl text-accent-color tracking-wide p-2 border rounded border-accent-color hover:border-accent-color transition-colors duration-200 "
                       >
                         Blog

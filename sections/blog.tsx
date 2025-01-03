@@ -5,7 +5,7 @@ export default function Blog() {
     <>
       <div className="fixed hidden xl:flex bottom-5 right-16 z-50 cursor-pointer">
         <Link
-          href="https://blog.vasanth.tech"
+          href="https://vasanth-selvaraj.github.io/my-blog/"
           target="_blank"
           // className="flex p-2 h-full w-full justify-center items-center cursor-pointer "
         >

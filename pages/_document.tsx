@@ -20,7 +20,10 @@ export default function Document() {
           name="google-site-verification"
           content="x31vTQvK7B2Ral8L2f3C5o3yqslTwke_m8uhpSCeipw"
         />
-        <meta property="og:url" content="https://vasanth.tech" />
+        <meta
+          property="og:url"
+          content="https://vasanth-selvaraj.github.io/portfolio/"
+        />
         <meta
           name="keyword"
           content="Next.js, Portfolio, vasanth's portfolio,vasanth tech, vasanth.tech, vasanth selvaraj, Web Development, JavaScript, Vasanth Selvaraj,Vasanth, vasanth, Web developer, MERN stack, Devops, Git"
@@ -29,8 +32,14 @@ export default function Document() {
         <meta property="og:type" content="website" />
         <link rel="apple-touch-icon" href="/memoji.png"></link>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://vasanth.tech" />
-        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="canonical"
+          href="https://vasanth-selvaraj.github.io/portfolio/"
+        />
+        <link
+          rel="icon"
+          href="https://vasanth-selvaraj.github.io/my-blog/img/logo.png"
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Vasanth`s Portfolio" />
         <meta
